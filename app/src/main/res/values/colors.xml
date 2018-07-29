@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--HBY-->
+    <color name="colorAccent">#8B6A43</color>
+    <color name="colorPrimary">#AF9467</color>
+    <color name="colorPrimaryDark">#8B6A43</color>
+    <color name="white">#FFF</color>
+    <color name="black">#000</color>
+    <color name="gray">#EEE</color>
+
+    <!--GZQ-->
+    <color name="mainColor">#4dc445</color>
+    <!--<color name="colorPrimaryDark">#303F9F</color>-->
+    <!--<color name="colorAccent">#000000</color>-->
+    <color name="grey">#ececec</color>
+    <color name="txtgrey">#7c7b7b</color>
+    <color name="greywhite">#aeacac</color>
+
+    <!--LJY-->
+    <!--<color name="colorPrimary">#e0b47158</color>-->
+    <!--<color name="colorPrimaryDark">#c8ab5353</color>-->
+    <!--<color name="colorAccent">#c8ab5353</color>-->
+    <color name="text1">#c7000000</color>
+</resources>

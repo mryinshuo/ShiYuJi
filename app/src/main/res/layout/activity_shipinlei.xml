@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.hby.shiyuji.shipinleiActivity"
+    android:orientation="vertical">
+    <!--相对布局包含整个页面,然后让评论位于相对布局底部-->
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
+        <!--顶部，位于整体LL外面，相对布局RL页面顶部-->
+        <!--整体的LL-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <ImageButton
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/fanhui" />
+
+                <TextView
+                    android:onClick="feiyibiaoqian"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="#河曲民歌"
+                    android:textColor="#E5B483"
+                    android:textSize="30dp"/>
+
+                <ImageButton
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/gengduo" />
+            </LinearLayout>
+            <!--视频区域-->
+            <VideoView
+                android:id="@+id/video"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:background="@drawable/hequminge"/>
+            <!--视频主信息区域-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:orientation="horizontal">
+                <!--视频主头像-->
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/hequminge" />
+                <!--视频主名字-->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:gravity="left|center"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:text="山西河曲民歌官方"
+                    android:textSize="20dp"
+                    android:textColor="#E5B483"/>
+                <!--关注视频住按钮-->
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/shape"
+                    android:gravity="center"
+                    android:text="关注"
+                    android:textColor="#E5B483"/>
+            </LinearLayout>
+            <!--滚动浏览区域-->
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <!--滚动区域整体LL-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <!--视频标题以及简介-->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:background="#E5B483"
+                        android:gravity="left|center"
+                        android:text="河曲民歌在反映中国民歌发展历史与中国民间社会生活状况方面，具有典型的意义。"
+                        android:textSize="20dp"
+                        android:textColor="#e6e6e6" />
+                    <!--点赞喜欢评论分享功能按键LL-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="20dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_weight="1" />
+                        <!--点赞-->
+                        <ImageButton
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/dianzan" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_weight="1" />
+                        <!--喜欢-->
+                        <ImageButton
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_weight="1"
+
+                            android:background="@drawable/xihuan" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_weight="1" />
+                        <!--评论-->
+                        <ImageButton
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/pinglun" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_weight="1" />
+                        <!--分享-->
+                        <ImageButton
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/fenxiang" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_weight="1" />
+                    </LinearLayout>
+                    <!--观众评论区-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="20dp"
+                        android:orientation="vertical">
+                        <!--单个评论布局-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="120dp"
+                            android:orientation="vertical">
+                            <!--评论主头像用户名点赞-->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp">
+                                <!--评论主头像-->
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:src="@drawable/yangge" />
+                                <!--评论主用户名-->
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="30dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginTop="8dp"
+                                    android:layout_weight="1"
+                                    android:text="落日余晖"
+                                    android:textSize="25dp" />
+                                <!--点赞该评论-->
+                                <ImageButton
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_marginTop="5dp"
+                                    android:background="@drawable/dianzan"
+                                    android:gravity="center" />
+                            </LinearLayout>
+                            <!--评论内容区域-->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="60dp"
+                                android:layout_marginLeft="70dp"
+                                android:layout_marginTop="10dp">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:text="咏叹了人间离苦、别绪、思念、期盼！"
+                                    android:textSize="20dp" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="120dp"
+                            android:orientation="vertical">
+                            <!--评论主头像用户名点赞-->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp">
+                                <!--评论主头像-->
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:src="@drawable/chuanju" />
+                                <!--评论主用户名-->
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="30dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginTop="8dp"
+                                    android:layout_weight="1"
+                                    android:text="山西某不知名网友"
+                                    android:textSize="25dp" />
+                                <!--点赞该评论-->
+                                <ImageButton
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_marginTop="5dp"
+                                    android:background="@drawable/dianzan"
+                                    android:gravity="center" />
+                            </LinearLayout>
+                            <!--评论内容区域-->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="60dp"
+                                android:layout_marginLeft="70dp"
+                                android:layout_marginTop="10dp">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:text="蕴含有丰富的美学意味。"
+                                    android:textSize="20dp" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="120dp"
+                            android:orientation="vertical">
+                            <!--评论主头像用户名点赞-->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp">
+                                <!--评论主头像-->
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:src="@drawable/pic3" />
+                                <!--评论主用户名-->
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="30dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginTop="8dp"
+                                    android:layout_weight="1"
+                                    android:text="家里有只小旺仔"
+                                    android:textSize="25dp" />
+                                <!--点赞该评论-->
+                                <ImageButton
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_marginTop="5dp"
+                                    android:background="@drawable/dianzan"
+                                    android:gravity="center" />
+                            </LinearLayout>
+                            <!--评论内容区域-->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="60dp"
+                                android:layout_marginLeft="70dp"
+                                android:layout_marginTop="10dp">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:text="河曲民歌吟唱内容丰富，涵盖社会生活的各个层面。"
+                                    android:textSize="20dp" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="120dp"
+                            android:orientation="vertical">
+                            <!--评论主头像用户名点赞-->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp">
+                                <!--评论主头像-->
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:src="@drawable/kongquewu" />
+                                <!--评论主用户名-->
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="30dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginTop="8dp"
+                                    android:layout_weight="1"
+                                    android:text="呆酱"
+                                    android:textSize="25dp" />
+                                <!--点赞该评论-->
+                                <ImageButton
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_marginTop="5dp"
+                                    android:background="@drawable/dianzan"
+                                    android:gravity="center" />
+                            </LinearLayout>
+                            <!--评论内容区域-->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="60dp"
+                                android:layout_marginLeft="70dp"
+                                android:layout_marginTop="10dp">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:text="一个上下句就揭示出一种深邃的感情状态或描绘出一种逼真的生活画面。"
+                                    android:textSize="20dp" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="120dp"
+                            android:orientation="vertical"
+                            android:layout_marginBottom="50dp">
+                            <!--评论主头像用户名点赞-->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp">
+                                <!--评论主头像-->
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:src="@drawable/kunqu" />
+                                <!--评论主用户名-->
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="30dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginTop="8dp"
+                                    android:layout_weight="1"
+                                    android:text="李三岁"
+                                    android:textSize="25dp" />
+                                <!--点赞该评论-->
+                                <ImageButton
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_marginTop="5dp"
+                                    android:background="@drawable/dianzan"
+                                    android:gravity="center" />
+                            </LinearLayout>
+                            <!--评论内容区域-->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="60dp"
+                                android:layout_marginLeft="70dp"
+                                android:layout_marginTop="10dp">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:text="极具文化神韵的传统经典原生态乡土民歌。"
+                                    android:textSize="20dp" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+        <!--底部评论LL,在整体LL外面使得位于页面底部-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="0dp"
+            android:background="#FFF"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/shape"
+                android:gravity="left|center"
+                android:text="   发表评论"
+                android:textSize="20dp" />
+
+            <ImageButton
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/pinglun" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

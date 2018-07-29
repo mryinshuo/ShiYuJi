@@ -1,0 +1,547 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bg"
+    tools:context=".channel_videoa"
+
+    android:layout_marginBottom="20dp">
+    <include layout="@layout/title_toolbar3"></include>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <Button
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:text="展开"
+                android:id="@+id/zhankai"
+                android:background="#d1d1d0d0"
+                android:layout_alignParentRight="true"
+
+
+                />
+            <HorizontalScrollView
+                android:id="@+id/hs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:scrollbars="none"
+                >
+
+                <LinearLayout
+                    android:id="@+id/liner"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+
+                    android:layout_height="60dp">
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/chuanyuea1"
+                        android:paddingLeft="8dp"
+                        android:textAlignment="center"
+                        android:background="#cff1e5bb"/>
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/chuanyuea2"
+                        android:paddingLeft="8dp"
+                        android:background="#cff1e5bb"/>
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="8dp"
+                        android:text="@string/chuanyuea3"
+                        android:background="#cff1e5bb"/>
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/chuanyuea4"
+                        android:paddingLeft="8dp"
+                        android:background="#cff1e5bb"/>
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/chuanyuea5"
+                        android:paddingLeft="8dp"
+                        android:background="#cff1e5bb"/>
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/chuanyuea6"
+                        android:paddingLeft="8dp"
+                        android:background="#cff1e5bb"/>
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/chuanyuea7"
+                        android:paddingLeft="8dp"
+                        android:background="#cff1e5bb"/>
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/chuanyuea8"
+                        android:paddingLeft="8dp"
+                        android:background="#cff1e5bb"/>
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/chuanyuea9"
+                        android:paddingLeft="8dp"
+                        android:background="#cff1e5bb"/>
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/chuanyuea10"
+                        android:paddingLeft="8dp"
+                        android:background="#cff1e5bb"/>
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/chuanyuea11"
+                        android:paddingLeft="8dp"
+                        android:background="#cff1e5bb"/>
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/chuanyuea12"
+                        android:paddingLeft="8dp"
+                        android:background="#cff1e5bb"/>
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/chuanyuea13"
+                        android:paddingLeft="8dp"
+                        android:background="#cff1e5bb"/>
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/chuanyuea14"
+                        android:paddingLeft="8dp"
+                        android:background="#cff1e5bb"/>
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/chuanyuea15"
+                        android:paddingLeft="8dp"
+                        android:background="#cff1e5bb"/>
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/chuanyuea16"
+                        android:paddingLeft="8dp"
+                        android:background="#cff1e5bb"/>
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/chuanyuea17"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="68dp"
+                        android:background="#cff1e5bb"/>
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+        </RelativeLayout>
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/jingxuan"
+                android:layout_marginLeft="8dp"/>
+
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:orientation="horizontal"
+                android:columnCount="2">
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/id_cardView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="5dp"
+                    android:layout_marginLeft="14dp"
+                    android:layout_marginTop="10dp"
+                    android:elevation="5dp"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+
+                        >
+
+                        <ImageView
+                            android:id="@+id/cardContent1"
+                            android:layout_width="160dp"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/shipin17" />
+
+
+
+                        <TextView
+                            android:id="@+id/cardin1"
+                            android:layout_width="160dp"
+                            android:layout_height="42dp"
+
+
+                            android:text="@string/shipinintro1"
+                            android:textColor="#000000"
+                            android:textSize="15sp" />
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+                <android.support.v7.widget.CardView
+                    android:id="@+id/id_cardView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:elevation="5dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+
+                        >
+
+                        <ImageView
+                            android:id="@+id/cardContent2"
+                            android:layout_width="160dp"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/shipin5" />
+
+
+
+
+                        <TextView
+                            android:id="@+id/cardin2"
+                            android:layout_width="160dp"
+                            android:layout_height="42dp"
+
+
+                            android:text="@string/shipinintro2"
+                            android:textColor="#000000"
+                            android:textSize="15sp" />
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+                <android.support.v7.widget.CardView
+                    android:id="@+id/id_cardView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="5dp"
+                    android:layout_marginLeft="14dp"
+                    android:layout_marginTop="10dp"
+                    android:elevation="5dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+
+                        >
+
+                        <ImageView
+                            android:id="@+id/cardContent3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/shipin2" />
+
+
+
+
+                        <TextView
+                            android:id="@+id/cardin3"
+                            android:layout_width="160dp"
+                            android:layout_height="42dp"
+
+                            android:textSize="15sp"
+
+                            android:textColor="#000000"
+                            android:text="@string/shipinintro3" />
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+                <android.support.v7.widget.CardView
+                    android:id="@+id/id_cardView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:elevation="5dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+
+                        >
+
+                        <ImageView
+                            android:id="@+id/cardContent4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/shipin3" />
+
+
+
+
+                        <TextView
+                            android:id="@+id/cardin4"
+                            android:layout_width="160dp"
+                            android:layout_height="42dp"
+
+                            android:textSize="15sp"
+
+                            android:textColor="#000000"
+                            android:text="@string/shipinintro4" />
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+
+                        <android.support.v7.widget.CardView
+                            android:id="@+id/id_cardView5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:cardCornerRadius="5dp"
+                            android:layout_marginLeft="14dp"
+                            android:layout_marginTop="10dp"
+                            android:elevation="5dp"
+                            >
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+
+                                >
+
+                                <ImageView
+                                    android:id="@+id/cardContent5"
+                                    android:layout_width="160dp"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/shipin6" />
+
+
+
+                                <TextView
+                                    android:id="@+id/cardin5"
+                                    android:layout_width="160dp"
+                                    android:layout_height="42dp"
+
+
+                                    android:text="@string/shipinintro4"
+                                    android:textColor="#000000"
+                                    android:textSize="15sp" />
+
+                            </LinearLayout>
+
+                        </android.support.v7.widget.CardView>
+                        <android.support.v7.widget.CardView
+                            android:id="@+id/id_cardView6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:cardCornerRadius="5dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:elevation="5dp"
+                            >
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+
+                                >
+
+                                <ImageView
+                                    android:id="@+id/cardContent6"
+                                    android:layout_width="160dp"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/shipin7" />
+
+
+
+                                <TextView
+                                    android:id="@+id/cardin6"
+                                    android:layout_width="160dp"
+                                    android:layout_height="42dp"
+
+
+                                    android:text="@string/shipinintro1"
+                                    android:textColor="#000000"
+                                    android:textSize="15sp" />
+
+                            </LinearLayout>
+
+                        </android.support.v7.widget.CardView>
+
+
+            </GridLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/remen"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"/>
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:orientation="vertical"
+                >
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/id_cardView7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:elevation="5dp"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+
+                        >
+
+                        <ImageView
+                            android:id="@+id/cardContent7"
+                            android:layout_width="160dp"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/shipin11" />
+
+
+                        <TextView
+                            android:id="@+id/cardin7"
+                            android:layout_width="175dp"
+                            android:layout_height="60dp"
+
+
+                            android:text="@string/shipinintro1"
+                            android:textColor="#000000"
+                            android:textSize="15sp" />
+
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+                <android.support.v7.widget.CardView
+                    android:id="@+id/id_cardView8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:elevation="5dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+
+                        >
+
+                        <ImageView
+                            android:id="@+id/cardContent8"
+                            android:layout_width="160dp"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/shipin8" />
+
+
+
+
+                        <TextView
+                            android:id="@+id/cardin8"
+                            android:layout_width="175dp"
+                            android:layout_height="60dp"
+
+
+                            android:text="@string/shipinintro1"
+                            android:textColor="#000000"
+                            android:textSize="15sp" />
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+                <android.support.v7.widget.CardView
+                    android:id="@+id/id_cardView9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:elevation="5dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+
+                        >
+
+                        <ImageView
+                            android:id="@+id/cardContent9"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/shipin19" />
+
+
+
+
+                        <TextView
+                            android:id="@+id/cardin9"
+                            android:layout_width="175dp"
+                            android:layout_height="60dp"
+
+
+                            android:text="@string/shipinintro1"
+                            android:textColor="#000000"
+                            android:textSize="15sp" />
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

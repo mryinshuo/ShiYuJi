@@ -9,7 +9,7 @@
     android:orientation="horizontal"
     android:paddingLeft="10dp"
     android:paddingRight="10dp"
-    tools:context=".syj"
+    tools:context="com.shiyuji.syj"
     tools:showIn="@layout/activity_syj">
 
     <ScrollView

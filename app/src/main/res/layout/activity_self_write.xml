@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".self_write">
+    tools:context="com.shiyuji.self_write">
     <include layout="@layout/title_toolbar5"></include>
     <RelativeLayout
         android:layout_width="match_parent"

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.hby.shiyuji.Main3Activity">
+    tools:context="com.shiyuji.Main3Activity">
     <!--LL代表LinearLayout-->
     <!--顶部 -->
     <!--顶部功能栏-->

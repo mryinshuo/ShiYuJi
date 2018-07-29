@@ -7,7 +7,7 @@
     android:orientation="vertical"
     android:background="@drawable/bg"
 
-    tools:context=".Write">
+    tools:context="com.shiyuji.Write">
     <include layout="@layout/title_toolbar2"></include><!--引入标题栏-->
      <LinearLayout
          android:layout_width="match_parent"

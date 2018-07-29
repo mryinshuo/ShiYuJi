@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".channel">
+    tools:context="com.shiyuji.channel">
 
     <include layout="@layout/title_toolbar4" />
     <include layout="@layout/content_channel" />

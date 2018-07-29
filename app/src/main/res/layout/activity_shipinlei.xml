@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.hby.shiyuji.shipinleiActivity"
+    tools:context="com.shiyuji.shipinleiActivity"
     android:orientation="vertical">
     <!--相对布局包含整个页面,然后让评论位于相对布局底部-->
     <RelativeLayout

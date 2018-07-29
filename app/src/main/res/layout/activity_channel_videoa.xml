@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@drawable/bg"
-    tools:context=".channel_videoa"
+    tools:context="com.shiyuji.channel_videoa"
 
     android:layout_marginBottom="20dp">
     <include layout="@layout/title_toolbar3"></include>

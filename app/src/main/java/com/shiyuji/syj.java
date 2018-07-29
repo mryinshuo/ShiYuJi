@@ -8,8 +8,6 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 
-import com.hby.shiyuji.R;
-
 
 public class syj extends AppCompatActivity {
 

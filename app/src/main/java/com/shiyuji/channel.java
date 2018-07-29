@@ -9,8 +9,6 @@ import android.support.v7.app.AppCompatActivity;
 
 import android.widget.Button;
 
-import com.hby.shiyuji.R;
-
 public class channel extends AppCompatActivity implements View.OnClickListener {
 
     private Button literature;

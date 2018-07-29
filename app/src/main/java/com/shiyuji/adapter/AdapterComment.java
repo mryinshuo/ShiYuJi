@@ -7,7 +7,7 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
-import com.hby.shiyuji.R;
+import com.shiyuji.R;
 import com.shiyuji.model.Comment;
 
 import java.util.List;

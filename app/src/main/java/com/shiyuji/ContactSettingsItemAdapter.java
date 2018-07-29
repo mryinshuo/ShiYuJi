@@ -11,8 +11,6 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.hby.shiyuji.R;
-
 import java.util.List;
 
 public class ContactSettingsItemAdapter extends ArrayAdapter {

@@ -6,8 +6,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
-import com.hby.shiyuji.R;
-
 public class AboutSettings extends AppCompatActivity {
 
     private long counts[] = new long[10];

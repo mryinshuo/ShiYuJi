@@ -7,8 +7,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.hby.shiyuji.R;
-
 public class FeedbackSettings extends AppCompatActivity {
 
     private EditText feedbackET;

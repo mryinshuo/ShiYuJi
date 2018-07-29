@@ -9,8 +9,6 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
-import com.hby.shiyuji.R;
-
 import java.util.List;
 
 public class QuestionSettingItemAdapter extends ArrayAdapter {

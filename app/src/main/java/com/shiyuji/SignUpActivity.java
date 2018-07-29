@@ -11,8 +11,6 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.hby.shiyuji.R;
-
 public class SignUpActivity extends AppCompatActivity implements View.OnClickListener {
 
     private EditText editTextUn;

@@ -9,8 +9,6 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
-import com.hby.shiyuji.R;
-
 import java.util.ArrayList;
 import java.util.List;
 

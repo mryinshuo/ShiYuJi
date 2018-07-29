@@ -19,8 +19,6 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 
-import com.hby.shiyuji.R;
-
 public class channel_videoa extends AppCompatActivity {
 
 

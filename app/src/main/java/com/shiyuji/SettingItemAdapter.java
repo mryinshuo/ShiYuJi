@@ -13,8 +13,6 @@ import android.widget.LinearLayout;
 import android.widget.Switch;
 import android.widget.TextView;
 
-import com.hby.shiyuji.R;
-
 import java.util.List;
 
 public class SettingItemAdapter extends ArrayAdapter {

@@ -5,8 +5,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 
-import com.hby.shiyuji.R;
-
 public class self_write extends AppCompatActivity {
 
     @Override

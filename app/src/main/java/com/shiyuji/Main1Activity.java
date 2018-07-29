@@ -14,7 +14,6 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.hby.shiyuji.R;
 import com.shiyuji.adapter.AdapterComment;
 import com.shiyuji.model.Comment;
 

@@ -8,8 +8,6 @@ import android.widget.RadioButton;
 import android.widget.TabHost;
 import android.widget.Toast;
 
-import com.hby.shiyuji.R;
-
 public class Main3Activity extends TabActivity {
 
     private RadioButton bottom1_pindao;

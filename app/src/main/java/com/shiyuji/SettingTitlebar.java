@@ -9,8 +9,6 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.hby.shiyuji.R;
-
 public class SettingTitlebar extends LinearLayout {
 
     private TextView titlebarText;

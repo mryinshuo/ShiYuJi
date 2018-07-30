@@ -91,7 +91,7 @@ public class channel extends AppCompatActivity implements View.OnClickListener {
                 break;
             case R.id.taolun:
                 if (selected != null) {
-                    Intent intent = new Intent(channel.this, syj.class);
+                    Intent intent = new Intent(channel.this, Trneds.class);
                     intent.putExtra("title", selected.getText());
                     startActivity(intent);
                     selected.setBackgroundResource(R.drawable.pao271);

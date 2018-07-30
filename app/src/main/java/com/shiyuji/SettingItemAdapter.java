@@ -36,7 +36,7 @@ public class SettingItemAdapter extends ArrayAdapter {
     }
     public void detail2UserHead(ViewGroup view, int userHead) {             // 传入遍历的根ViewGroup
         View delete;                                                        // 声明delete为要删除的View
-        int deleteId = currentContext.getResources().getIdentifier("itemDetailTV", "id", "com.hby.shiyuji"); // 要删除的控件id
+        int deleteId = currentContext.getResources().getIdentifier("itemDetailTV", "id", "com.shiyuji"); // 要删除的控件id
         for (int i = view.getChildCount(); i > 0; i--) {                    // 遍历view的子view个数次（必须反向遍历）
             delete = view.getChildAt(i - 1);                          // 将当前view赋给delete
             if (delete instanceof TextView) {                               // 如果该view是TextView
@@ -51,7 +51,7 @@ public class SettingItemAdapter extends ArrayAdapter {
     }
     public void next2Switch(ViewGroup view) {                               // 传入遍历的根ViewGroup
         View delete;                                                        // 声明delete为要删除的View
-        int deleteId = currentContext.getResources().getIdentifier("itemNextIV", "id", "com.hby.shiyuji"); // 要删除的控件id
+        int deleteId = currentContext.getResources().getIdentifier("itemNextIV", "id", "com.shiyuji"); // 要删除的控件id
         for (int i = view.getChildCount(); i > 0; i--) {                    // 遍历view的子view个数次（必须反向遍历）
             delete = view.getChildAt(i - 1);                          // 将当前view赋给delete
             if (delete instanceof ImageView) {                              // 如果该view是ImageView

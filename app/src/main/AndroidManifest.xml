@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.hby.shiyuji">
+    package="com.shiyuji">
 
     <uses-permission android:name="android.permission.INTERNET"/>
 
@@ -46,7 +46,7 @@
         <activity android:name="com.shiyuji.zhibo" />
 
         <!--LJY-->
-        <activity android:name="com.shiyuji.syj" />
+        <activity android:name="com.shiyuji.Trneds" />
         <activity android:name="com.shiyuji.Write" />
         <activity android:name="com.shiyuji.channel" />
         <activity android:name="com.shiyuji.channel_videoa" />

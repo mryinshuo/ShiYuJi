@@ -1,23 +1,10 @@
 package com.shiyuji;
 
-import android.content.Context;
 import android.content.Intent;
-import android.content.res.ColorStateList;
-import android.content.res.TypedArray;
-import android.os.Build;
-import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.CardView;
-
-import android.util.AttributeSet;
 import android.view.View;
 import android.widget.Button;
-import android.widget.FrameLayout;
-import android.widget.HorizontalScrollView;
-import android.widget.LinearLayout;
-import android.widget.ListView;
-import android.widget.RelativeLayout;
 
 public class channel_videoa extends AppCompatActivity {
 

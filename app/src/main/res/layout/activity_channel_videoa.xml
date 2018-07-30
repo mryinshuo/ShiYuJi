@@ -9,7 +9,7 @@
     android:orientation="vertical"
     tools:context="com.shiyuji.channel_videoa">
 
-    <include layout="@layout/title_toolbar3"></include>
+    <include layout="@layout/title_toolbar3"/>
 
     <RelativeLayout
         android:layout_width="match_parent"

@@ -11,11 +11,11 @@
         android:roundIcon="@mipmap/launcher"
         android:supportsRtl="true"
         android:theme="@style/AppThemeNoActionBar">
+
         <!--HBY-->
         <activity android:name="com.shiyuji.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -28,11 +28,11 @@
         <activity android:name="com.shiyuji.AboutSettings" />
         <activity android:name="com.shiyuji.QuestionSettings" />
         <activity android:name="com.shiyuji.FeedbackSettings"/>
-        <activity android:name="com.shiyuji.ContactSettings" android:windowSoftInputMode="adjustPan" />
+        <activity android:name="com.shiyuji.ContactSettings"
+            android:windowSoftInputMode="adjustPan" />
 
         <!--GZQ-->
-        <activity
-            android:name="com.shiyuji.Main1Activity"
+        <activity android:name="com.shiyuji.Main1Activity"
             android:windowSoftInputMode="stateHidden|adjustResize" />
         <activity android:name="com.shiyuji.Main2Activity" />
         <activity android:name="com.shiyuji.UserActivity" />

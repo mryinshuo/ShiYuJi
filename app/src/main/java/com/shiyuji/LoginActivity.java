@@ -21,7 +21,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     private Button loginButton;
     private TextView findPw;
     private TextView log2sign;
-    private Button setting;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,8 +37,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         log2sign.setOnClickListener(this);
         findPw = (TextView) findViewById(R.id.findPw);
         findPw.setOnClickListener(this);
-        setting = (Button) findViewById(R.id.setting);
-        setting.setOnClickListener(this);
     }
 
     @Override
@@ -60,8 +57,9 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 //                String username = editTextUn.getText().toString();
 //                String password = editTextPw.getText().toString();
 //                Toast.makeText(this, "账号：" + username + "\n" + "密码：" + password, Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(this, Main3Activity.class);
+                Intent intent = new Intent(this, IndexActivity.class);
                 startActivity(intent);
+                finish();
                 break;
             case R.id.log2sign:         // 注册按钮（login to sign up）
                 Intent intent1 = new Intent(this, SignUpActivity.class);
@@ -72,10 +70,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 Intent intent2 = new Intent(this, FindPasswordActivity.class);
                 startActivity(intent2);     // 启动找回密码Activity
                 break;                      // 不调用finish()，找回密码页为二级目录，用户须退回一级目录再退出程序
-            case R.id.setting:          // 设置按钮
-                Intent settings = new Intent(this, Settings.class);
-                startActivity(settings);    // 启动设置Activity
-                break;
         }
     }
 

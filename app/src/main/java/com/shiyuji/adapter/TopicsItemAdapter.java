@@ -1,4 +1,4 @@
-package com.shiyuji;
+package com.shiyuji.adapter;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
@@ -11,13 +11,16 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.shiyuji.R;
+import com.shiyuji.model.TopicsItem;
+
 import java.util.List;
 
-public class TrendsItemAdapter extends ArrayAdapter {
+public class TopicsItemAdapter extends ArrayAdapter {
 
     private final int resourceId;           // 当前视图id
 
-    public TrendsItemAdapter(Context context, int textViewResourceId, List<TrendsItem> items) {
+    public TopicsItemAdapter(Context context, int textViewResourceId, List<TopicsItem> items) {
         super(context, textViewResourceId, items);
         resourceId = textViewResourceId;
     }
@@ -25,7 +28,7 @@ public class TrendsItemAdapter extends ArrayAdapter {
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
-        TrendsItem item = (TrendsItem) getItem(position);
+        TopicsItem item = (TopicsItem) getItem(position);
         View view = LayoutInflater.from(getContext()).inflate(resourceId, null);
 
         TextView trendsTitle = (TextView) view.findViewById(R.id.trendsTitle);

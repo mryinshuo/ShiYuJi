@@ -12,6 +12,9 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.shiyuji.adapter.SettingItemAdapter;
+import com.shiyuji.model.SettingItem;
+
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;

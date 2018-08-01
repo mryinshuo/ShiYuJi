@@ -1,4 +1,4 @@
-package com.shiyuji;
+package com.shiyuji.adapter;
 
 import android.content.Context;
 import android.graphics.Color;
@@ -12,6 +12,9 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Switch;
 import android.widget.TextView;
+
+import com.shiyuji.R;
+import com.shiyuji.model.SettingItem;
 
 import java.util.List;
 

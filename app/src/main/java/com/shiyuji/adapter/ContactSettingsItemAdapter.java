@@ -1,4 +1,4 @@
-package com.shiyuji;
+package com.shiyuji.adapter;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
@@ -10,6 +10,9 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import com.shiyuji.model.ContactSettingsItem;
+import com.shiyuji.R;
 
 import java.util.List;
 

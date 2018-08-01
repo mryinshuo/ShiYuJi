@@ -1,11 +1,11 @@
-package com.shiyuji;
+package com.shiyuji.model;
 
-public class TrendsItem {
+public class TopicsItem {
     private String title;
     private String content;
     private int img;
 
-    public TrendsItem(String title, String content, int img) {
+    public TopicsItem(String title, String content, int img) {
         this.title = title;
         this.content = content;
         this.img = img;

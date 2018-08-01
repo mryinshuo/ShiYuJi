@@ -1,4 +1,4 @@
-package com.shiyuji;
+package com.shiyuji.model;
 
 public class ContactSettingsItem {      // ContactSettings中对话框的实体类
     private int head;                       // 头像id

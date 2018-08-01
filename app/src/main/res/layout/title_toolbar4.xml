@@ -3,14 +3,9 @@
     android:id="@+id/layout_titlebar4"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-
     android:layout_height="58dp"
     android:padding="8dp"
-    android:background="@drawable/bg4"
-    xmlns:tools="http://schemas.android.com/tools">
-
-
-
+    android:background="@drawable/dingbu4">
     <TextView
         android:id="@+id/like4"
         android:layout_width="wrap_content"
@@ -19,21 +14,17 @@
         android:layout_centerVertical="true"
         android:textSize="25sp"
         android:textStyle="bold"
-
-
         android:text="频道"/>
-
-    <ImageButton
+    <ImageView
         android:id="@+id/like5"
-        android:layout_width="35dp"
-        android:layout_height="65dp"
-        android:background="@drawable/ss"
-        android:layout_alignParentRight="true"
-        android:layout_marginRight="15dp"
-
-
-
-
-        />
-
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="10dp"
+        android:src="@drawable/ss"
+        android:layout_alignParentEnd="true"/>
+    <!--<ImageButton-->
+        <!--android:id="@+id/like5"-->
+        <!--android:layout_width="65dp"-->
+        <!--android:layout_height="65dp"-->
+        <!--android:background="@drawable/ss"/>-->
 </RelativeLayout>

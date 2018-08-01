@@ -104,15 +104,6 @@
                     android:layout_height="wrap_content"
                     android:text="@string/log2sign"
                     android:textAlignment="center"/>
-                <Button
-                    android:id="@+id/setting"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginVertical="15dp"
-                    android:text="@string/settings"
-                    android:textSize="18sp"
-                    android:textColor="@color/gray"
-                    android:background="@color/colorPrimaryDark"/>
             </LinearLayout>
         </LinearLayout>
     </ScrollView>

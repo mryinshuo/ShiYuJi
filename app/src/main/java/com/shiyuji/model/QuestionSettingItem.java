@@ -1,4 +1,4 @@
-package com.shiyuji;
+package com.shiyuji.model;
 
 public class QuestionSettingItem {      // QuestionSettings中自定义item的实体类
     private String question;                // 问题

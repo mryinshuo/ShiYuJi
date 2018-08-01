@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:background="@drawable/dingbu"
+            android:layout_height="50dp"
+            android:layout_width="match_parent"
+            android:orientation="horizontal">
+            <!--最外层LL水平布局-->
+            <LinearLayout
+                android:layout_height="50dp"
+                android:layout_marginLeft="5dp"
+                android:layout_width="50dp">
+                <!--滑动栏按钮LL-->
+                <ImageView
+                    android:id="@+id/TOP_huadonglan"
+                    android:layout_gravity="center"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_width="30dp"
+                    android:src="@drawable/gengduo" />
+                <!--滑动栏按钮（此处为图片，后期添加链接）-->
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:layout_width="0dp">
+
+                <TextView
+                    android:background="@drawable/shape"
+                    android:gravity="center"
+                    android:id="@+id/agree"
+                    android:layout_height="30dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="fill_parent"
+                    android:text="Find What You Like"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_height="50dp"
+                android:layout_width="50dp">
+
+                <ImageView
+                    android:layout_gravity="center"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="30dp"
+                    android:src="@drawable/message" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/indexVP"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <android.support.v4.view.PagerTitleStrip
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top"
+                    android:background="@color/white"
+                    android:paddingVertical="10dp"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="18sp"/>
+            </android.support.v4.view.ViewPager>
+
+            <RadioGroup
+                android:id="@+id/xuanxiangka_bottom"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/dibu"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"/>
+                <!--主页-->
+                <RadioButton
+                    android:id="@+id/bottom1_zhuye"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/xuanxiangka_zhuye"
+                    android:button="@null"
+                    android:checked="true" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"/>
+                <!--频道-->
+                <RadioButton
+                    android:id="@+id/bottom1_pindao"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/xuanxiangka_pindao"
+                    android:button="@null" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"/>
+                <!--动态-->
+                <RadioButton
+                    android:id="@+id/bottom1_dongtai"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/xuanxiangka_dongtai"
+                    android:button="@null" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"/>
+            </RadioGroup>
+        </RelativeLayout>
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>

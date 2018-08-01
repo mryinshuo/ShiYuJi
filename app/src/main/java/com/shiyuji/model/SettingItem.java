@@ -1,4 +1,4 @@
-package com.shiyuji;
+package com.shiyuji.model;
 
 import android.content.Intent;
 

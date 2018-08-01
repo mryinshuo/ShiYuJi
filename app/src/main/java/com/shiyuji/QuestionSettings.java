@@ -10,6 +10,9 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.shiyuji.adapter.QuestionSettingItemAdapter;
+import com.shiyuji.model.QuestionSettingItem;
+
 import java.util.ArrayList;
 import java.util.List;
 

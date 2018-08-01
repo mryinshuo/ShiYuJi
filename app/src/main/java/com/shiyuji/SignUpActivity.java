@@ -13,6 +13,7 @@ import android.widget.Toast;
 
 public class SignUpActivity extends AppCompatActivity implements View.OnClickListener {
 
+    private Intent loginIntent;
     private EditText editTextUn;
     private EditText editTextPw;
     private EditText editTextPwCh;
@@ -37,14 +38,16 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.signUpButton:     // 注册按钮
-                String username = editTextUn.getText().toString();
-                String password = editTextPw.getText().toString();
-                String checkPassword = editTextPwCh.getText().toString();
-                Toast.makeText(this, "账号：" + username + "\n" + "密码：" + password + "\n" + "确认密码：" + checkPassword, Toast.LENGTH_SHORT).show();
+//                String username = editTextUn.getText().toString();
+//                String password = editTextPw.getText().toString();
+//                String checkPassword = editTextPwCh.getText().toString();
+//                Toast.makeText(this, "账号：" + username + "\n" + "密码：" + password + "\n" + "确认密码：" + checkPassword, Toast.LENGTH_SHORT).show();
+                loginIntent = new Intent(this, LoginActivity.class);
+                startActivity(loginIntent);
+                finish();
                 break;
-            case R.id.sign2log:         // 登陆按钮（sign up to login）
-                Intent intent = new Intent(this, LoginActivity.class);
-                startActivity(intent);      // 启动登陆Activity
+            case R.id.sign2log:         // 登陆按钮
+                startActivity(loginIntent);      // 启动登陆Activity
                 finish();
                 break;
         }

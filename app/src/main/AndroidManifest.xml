@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.shiyuji">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -12,45 +12,47 @@
         android:supportsRtl="true"
         android:theme="@style/AppThemeNoActionBar">
 
-        <!--HBY-->
-        <activity android:name="com.shiyuji.SplashActivity">
+        <!-- HBY -->
+        <activity android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.shiyuji.LoginActivity" />
-        <activity android:name="com.shiyuji.SignUpActivity" />
-        <activity android:name="com.shiyuji.FindPasswordActivity" />
-        <activity android:name="com.shiyuji.Settings" />
-        <activity android:name="com.shiyuji.InfoSettings" />
-        <activity android:name="com.shiyuji.NoticeSettings" />
-        <activity android:name="com.shiyuji.AboutSettings" />
-        <activity android:name="com.shiyuji.QuestionSettings" />
-        <activity android:name="com.shiyuji.FeedbackSettings"/>
-        <activity android:name="com.shiyuji.ContactSettings"
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".SignUpActivity" />
+        <activity android:name=".FindPasswordActivity" />
+        <activity android:name=".Settings" />
+        <activity android:name=".InfoSettings" />
+        <activity android:name=".NoticeSettings" />
+        <activity android:name=".AboutSettings" />
+        <activity android:name=".QuestionSettings" />
+        <activity android:name=".FeedbackSettings" />
+        <activity
+            android:name=".ContactSettings"
             android:windowSoftInputMode="adjustPan" />
 
-        <!--GZQ-->
-        <activity android:name="com.shiyuji.Main1Activity"
+        <!-- GZQ -->
+        <activity
+            android:name=".Main1Activity"
             android:windowSoftInputMode="stateHidden|adjustResize" />
-        <activity android:name="com.shiyuji.Main2Activity" />
-        <activity android:name="com.shiyuji.UserActivity" />
-        <activity android:name="com.shiyuji.User2Activity" />
+        <activity android:name=".UserActivity" />
+        <activity android:name=".User2Activity" />
 
-        <!--YCH-->
-        <activity android:name="com.shiyuji.Main3Activity" />
-        <activity android:name="com.shiyuji.shipinleiActivity" />
-        <activity android:name="com.shiyuji.feiyibiaoqian" />
-        <activity android:name="com.shiyuji.sousuo" />
-        <activity android:name="com.shiyuji.zhibo" />
+        <!-- YCH -->
+        <activity android:name=".shipinleiActivity" />
+        <activity android:name=".feiyibiaoqian" />
+        <activity android:name=".sousuo" />
+        <activity android:name=".zhibo" />
 
-        <!--LJY-->
-        <activity android:name="com.shiyuji.Trneds" />
-        <activity android:name="com.shiyuji.Write" />
-        <activity android:name="com.shiyuji.channel" />
-        <activity android:name="com.shiyuji.channel_videoa" />
-        <activity android:name="com.shiyuji.self_write" />
+        <!-- LJY -->
+        <activity android:name=".Topics" />
+        <activity android:name=".Write" />
+        <activity android:name=".ChannelActivity" />
+        <activity android:name=".channel_videoa" />
+        <activity android:name=".self_write" />
+        <activity android:name=".IndexActivity"></activity>
     </application>
 
 </manifest>

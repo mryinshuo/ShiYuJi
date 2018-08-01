@@ -9,6 +9,9 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
+import com.shiyuji.adapter.SettingItemAdapter;
+import com.shiyuji.model.SettingItem;
+
 import java.util.ArrayList;
 import java.util.List;
 

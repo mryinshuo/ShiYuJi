@@ -4,6 +4,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ListView;
 
+import com.shiyuji.adapter.SettingItemAdapter;
+import com.shiyuji.model.SettingItem;
+
 import java.util.ArrayList;
 import java.util.List;
 

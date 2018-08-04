@@ -12,20 +12,26 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.RadioButton;
+import android.widget.Toast;
 
+import com.shiyuji.adapter.IndexItemAdapter;
 import com.shiyuji.adapter.IndexPagerAdapter;
+import com.shiyuji.model.IndexItem;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class IndexActivity extends AppCompatActivity implements View.OnClickListener, NavigationView.OnNavigationItemSelectedListener {
 
-    private List<Integer> list;
+    private List<Integer> page;
     private List<String> title;
     private ViewPager indexVP;
-    private RadioButton bottom1_pindao;
-    private RadioButton bottom1_dongtai;
+    private ImageView zhuye;
+    private ImageView pindao;
+    private ImageView dongtai;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,25 +41,26 @@ public class IndexActivity extends AppCompatActivity implements View.OnClickList
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        findViewById(R.id.bottom1_pindao).setBackgroundResource(R.drawable.pindaodianjihou);
-        findViewById(R.id.bottom1_dongtai).setBackgroundResource(R.drawable.dongtaidianjihou);
-        findViewById(R.id.bottom1_zhuye).setBackgroundResource(R.drawable.zhuyedianjiqian);
+        zhuye = (ImageView) findViewById(R.id.bottom1_zhuye);
+        pindao = (ImageView) findViewById(R.id.bottom1_pindao);
+        dongtai = (ImageView) findViewById(R.id.bottom1_dongtai);
+
+        pindao.setImageResource(R.drawable.pindaodianjihou);
+        dongtai.setImageResource(R.drawable.dongtaidianjihou);
+        zhuye.setImageResource(R.drawable.zhuyedianjiqian);
 
         init();
         indexVP = (ViewPager) findViewById(R.id.indexVP);
-        indexVP.setAdapter(new IndexPagerAdapter(this, list, title));
-
-        bottom1_pindao = (RadioButton) findViewById(R.id.bottom1_pindao);
-        bottom1_dongtai = (RadioButton) findViewById(R.id.bottom1_dongtai);
-        bottom1_pindao.setOnClickListener(this);
-        bottom1_dongtai.setOnClickListener(this);
+        indexVP.setAdapter(new IndexPagerAdapter(this, page, title));
+        pindao.setOnClickListener(this);
+        dongtai.setOnClickListener(this);
     }
 
     public void init() {
-        list = new ArrayList<>();
-        list.add(R.layout.activity_index_recommend);
-        list.add(R.layout.activity_index_live);
-        list.add(R.layout.activity_index_nearby);
+        page = new ArrayList<>();
+        page.add(R.layout.activity_index_recommend);
+        page.add(R.layout.activity_index_live);
+        page.add(R.layout.activity_index_nearby);
 
         title = new ArrayList<>();
         title.add("推荐");

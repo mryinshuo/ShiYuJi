@@ -6,27 +6,30 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.RadioButton;
 
 public class UserActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private RadioButton bottom1_zhuye;
-    private RadioButton bottom1_pindao;
+    private ImageView zhuye;
+    private ImageView pindao;
+    private ImageView dongtai;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user);
 
-        findViewById(R.id.bottom1_zhuye).setBackgroundResource(R.drawable.zhuyedianjihou);
-        findViewById(R.id.bottom1_pindao).setBackgroundResource(R.drawable.pindaodianjihou);
-        findViewById(R.id.bottom1_dongtai).setBackgroundResource(R.drawable.dongtaidianjiqian);
+        zhuye = (ImageView) findViewById(R.id.bottom1_zhuye);
+        pindao = (ImageView) findViewById(R.id.bottom1_pindao);
+        dongtai = (ImageView) findViewById(R.id.bottom1_dongtai);
 
-        bottom1_zhuye = (RadioButton) findViewById(R.id.bottom1_zhuye);
-        bottom1_pindao = (RadioButton) findViewById(R.id.bottom1_pindao);
+        zhuye.setOnClickListener(this);
+        pindao.setOnClickListener(this);
 
-        bottom1_zhuye.setOnClickListener(this);
-        bottom1_pindao.setOnClickListener(this);
+        zhuye.setImageResource(R.drawable.zhuyedianjihou);
+        pindao.setImageResource(R.drawable.pindaodianjihou);
+        dongtai.setImageResource(R.drawable.dongtaidianjiqian);
     }
 
     @Override

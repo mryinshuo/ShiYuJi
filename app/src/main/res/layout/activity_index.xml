@@ -59,80 +59,69 @@
             </LinearLayout>
         </LinearLayout>
 
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <android.support.v4.view.ViewPager
-                android:id="@+id/indexVP"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <android.support.v4.view.PagerTitleStrip
+                android:layout_height="0dp"
+                android:layout_weight="10">
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/indexVP"
                     android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <android.support.v4.view.PagerTitleStrip
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top"
+                        android:background="@color/white"
+                        android:paddingVertical="10dp"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="18sp"/>
+                </android.support.v4.view.ViewPager>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/dibu">
+                <LinearLayout
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="top"
-                    android:background="@color/white"
-                    android:paddingVertical="10dp"
-                    android:textColor="@color/colorPrimaryDark"
-                    android:textSize="18sp"/>
-            </android.support.v4.view.ViewPager>
-
-            <RadioGroup
-                android:id="@+id/xuanxiangka_bottom"
-                android:layout_width="wrap_content"
-                android:layout_height="60dp"
-                android:layout_alignParentBottom="true"
-                android:background="@drawable/dibu"
-                android:orientation="horizontal">
-
+                    android:layout_weight="1">
+                    <ImageView
+                        android:id="@+id/bottom1_zhuye"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/xuanxiangka_zhuye" />
+                </LinearLayout>
                 <LinearLayout
                     android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"/>
-                <!--主页-->
-                <RadioButton
-                    android:id="@+id/bottom1_zhuye"
-                    android:layout_width="0dp"
-                    android:layout_height="fill_parent"
-                    android:layout_weight="1"
-                    android:background="@drawable/xuanxiangka_zhuye"
-                    android:button="@null"
-                    android:checked="true" />
-
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+                    <ImageView
+                        android:id="@+id/bottom1_pindao"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/xuanxiangka_pindao"/>
+                </LinearLayout>
                 <LinearLayout
                     android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"/>
-                <!--频道-->
-                <RadioButton
-                    android:id="@+id/bottom1_pindao"
-                    android:layout_width="0dp"
-                    android:layout_height="fill_parent"
-                    android:layout_weight="1"
-                    android:background="@drawable/xuanxiangka_pindao"
-                    android:button="@null" />
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"/>
-                <!--动态-->
-                <RadioButton
-                    android:id="@+id/bottom1_dongtai"
-                    android:layout_width="0dp"
-                    android:layout_height="fill_parent"
-                    android:layout_weight="1"
-                    android:background="@drawable/xuanxiangka_dongtai"
-                    android:button="@null" />
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"/>
-            </RadioGroup>
-        </RelativeLayout>
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+                    <ImageView
+                        android:id="@+id/bottom1_dongtai"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/xuanxiangka_dongtai"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
     </LinearLayout>
 
 </android.support.design.widget.CoordinatorLayout>

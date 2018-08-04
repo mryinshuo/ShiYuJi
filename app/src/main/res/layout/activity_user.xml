@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="9"
         android:scrollbars="vertical">
 
         <LinearLayout
@@ -33,7 +35,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:src="@drawable/user_head" />
-                    >
+
                     <!--用户名称-->
                     <TextView
                         android:id="@+id/userN"
@@ -323,61 +325,41 @@
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
-    <RadioGroup
-        android:id="@+id/xuanxiangka_bottom"
-        android:layout_width="wrap_content"
-        android:layout_height="60dp"
-        android:layout_alignParentBottom="true"
-        android:background="@drawable/dibu"
-        android:orientation="horizontal">
-
-        <RadioButton
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/dibu">
+        <LinearLayout
             android:layout_width="0dp"
-            android:layout_height="fill_parent"
-            android:layout_weight="1"
-            android:button="@null" />
-        <!--主页-->
-        <RadioButton
-            android:id="@+id/bottom1_zhuye"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            <ImageView
+                android:id="@+id/bottom1_zhuye"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/xuanxiangka_zhuye" />
+        </LinearLayout>
+        <LinearLayout
             android:layout_width="0dp"
-            android:layout_height="fill_parent"
-            android:layout_weight="1"
-            android:background="@drawable/xuanxiangka_zhuye"
-            android:button="@null"
-            android:checked="true" />
-
-        <RadioButton
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            <ImageView
+                android:id="@+id/bottom1_pindao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/xuanxiangka_pindao"/>
+        </LinearLayout>
+        <LinearLayout
             android:layout_width="0dp"
-            android:layout_height="fill_parent"
-            android:layout_weight="1"
-            android:button="@null" />
-        <!--频道-->
-        <RadioButton
-            android:id="@+id/bottom1_pindao"
-            android:layout_width="0dp"
-            android:layout_height="fill_parent"
-            android:layout_weight="1"
-            android:background="@drawable/xuanxiangka_pindao"
-            android:button="@null" />
-
-        <RadioButton
-            android:layout_width="0dp"
-            android:layout_height="fill_parent"
-            android:layout_weight="1"
-            android:button="@null" />
-        <!--动态-->
-        <RadioButton
-            android:id="@+id/bottom1_dongtai"
-            android:layout_width="0dp"
-            android:layout_height="fill_parent"
-            android:layout_weight="1"
-            android:background="@drawable/xuanxiangka_dongtai"
-            android:button="@null" />
-
-        <RadioButton
-            android:layout_width="0dp"
-            android:layout_height="fill_parent"
-            android:layout_weight="1"
-            android:button="@null" />
-    </RadioGroup>
-</RelativeLayout>
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            <ImageView
+                android:id="@+id/bottom1_dongtai"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/xuanxiangka_dongtai"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -9,6 +9,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.RadioButton;
 
 public class ChannelActivity extends AppCompatActivity implements View.OnClickListener {
@@ -25,18 +26,15 @@ public class ChannelActivity extends AppCompatActivity implements View.OnClickLi
     private Button folk;
     private Button shipinqua;
     private Button taolun;
-    private RadioButton bottom1_zhuye;
-    private RadioButton bottom1_dongtai;
+    private ImageView zhuye;
+    private ImageView pindao;
+    private ImageView dongtai;
     private Button selected = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_channel);
-
-        findViewById(R.id.bottom1_dongtai).setBackgroundResource(R.drawable.dongtaidianjihou);
-        findViewById(R.id.bottom1_zhuye).setBackgroundResource(R.drawable.zhuyedianjihou);
-        findViewById(R.id.bottom1_pindao).setBackgroundResource(R.drawable.pindaodianjiqian);
 
         literature = (Button) findViewById(R.id.literature);
         music = (Button) findViewById(R.id.music);
@@ -50,8 +48,9 @@ public class ChannelActivity extends AppCompatActivity implements View.OnClickLi
         folk = (Button) findViewById(R.id.folk);
         shipinqua = (Button) findViewById(R.id.shipinqua);
         taolun = (Button) findViewById(R.id.taolun);
-        bottom1_zhuye = (RadioButton) findViewById(R.id.bottom1_zhuye);
-        bottom1_dongtai = (RadioButton) findViewById(R.id.bottom1_dongtai);
+        zhuye = (ImageView) findViewById(R.id.bottom1_zhuye);
+        pindao = (ImageView) findViewById(R.id.bottom1_pindao);
+        dongtai = (ImageView) findViewById(R.id.bottom1_dongtai);
 
         literature.setOnClickListener(this);
         music.setOnClickListener(this);
@@ -65,8 +64,12 @@ public class ChannelActivity extends AppCompatActivity implements View.OnClickLi
         folk.setOnClickListener(this);
         shipinqua.setOnClickListener(this);
         taolun.setOnClickListener(this);
-        bottom1_zhuye.setOnClickListener(this);
-        bottom1_dongtai.setOnClickListener(this);
+        zhuye.setOnClickListener(this);
+        dongtai.setOnClickListener(this);
+
+        dongtai.setImageResource(R.drawable.dongtaidianjihou);
+        zhuye.setImageResource(R.drawable.zhuyedianjihou);
+        pindao.setImageResource(R.drawable.pindaodianjiqian);
     }
 
     @Override

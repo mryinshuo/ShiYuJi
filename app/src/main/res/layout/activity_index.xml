@@ -8,55 +8,36 @@
         android:layout_height="match_parent">
 
         <LinearLayout
-            android:background="@drawable/dingbu"
-            android:layout_height="50dp"
+            android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:orientation="horizontal">
-            <!--最外层LL水平布局-->
-            <LinearLayout
-                android:layout_height="50dp"
-                android:layout_marginLeft="5dp"
-                android:layout_width="50dp">
-                <!--滑动栏按钮LL-->
-                <ImageView
-                    android:id="@+id/TOP_huadonglan"
-                    android:layout_gravity="center"
-                    android:layout_height="30dp"
-                    android:layout_marginLeft="5dp"
-                    android:layout_width="30dp"
-                    android:src="@drawable/gengduo" />
-                <!--滑动栏按钮（此处为图片，后期添加链接）-->
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_height="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/dingbu">
+            <ImageView
+                android:id="@+id/indexDrawerIV"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
                 android:layout_weight="1"
-                android:layout_width="0dp">
+                android:layout_gravity="center"
+                android:src="@drawable/gengduo" />
 
-                <TextView
-                    android:background="@drawable/shape"
-                    android:gravity="center"
-                    android:id="@+id/agree"
-                    android:layout_height="30dp"
-                    android:layout_marginBottom="5dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_width="fill_parent"
-                    android:text="Find What You Like"
-                    android:textColor="#ffffff"
-                    android:textSize="20sp" />
-            </LinearLayout>
+            <TextView
+                android:id="@+id/agree"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_weight="6"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:background="@drawable/round_corner_gray"
+                android:text="Find What You Like"
+                android:textColor="#ffffff"
+                android:textSize="20sp" />
 
-            <LinearLayout
-                android:layout_height="50dp"
-                android:layout_width="50dp">
-
-                <ImageView
-                    android:layout_gravity="center"
-                    android:layout_height="30dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_width="30dp"
-                    android:src="@drawable/message" />
-            </LinearLayout>
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:src="@drawable/message" />
         </LinearLayout>
 
         <LinearLayout
@@ -67,7 +48,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="10">
+                android:layout_weight="11">
                 <android.support.v4.view.ViewPager
                     android:id="@+id/indexVP"
                     android:layout_width="match_parent"
@@ -78,7 +59,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="top"
                         android:background="@color/white"
-                        android:paddingVertical="10dp"
+                        android:paddingVertical="7dp"
                         android:textColor="@color/colorPrimaryDark"
                         android:textSize="18sp"/>
                 </android.support.v4.view.ViewPager>

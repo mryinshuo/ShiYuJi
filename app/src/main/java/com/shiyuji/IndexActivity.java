@@ -9,6 +9,7 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -32,6 +33,7 @@ public class IndexActivity extends AppCompatActivity implements View.OnClickList
     private ImageView zhuye;
     private ImageView pindao;
     private ImageView dongtai;
+    private ImageView indexDrawer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +46,7 @@ public class IndexActivity extends AppCompatActivity implements View.OnClickList
         zhuye = (ImageView) findViewById(R.id.bottom1_zhuye);
         pindao = (ImageView) findViewById(R.id.bottom1_pindao);
         dongtai = (ImageView) findViewById(R.id.bottom1_dongtai);
+        indexDrawer = (ImageView) findViewById(R.id.indexDrawerIV);
 
         pindao.setImageResource(R.drawable.pindaodianjihou);
         dongtai.setImageResource(R.drawable.dongtaidianjihou);
@@ -54,6 +57,7 @@ public class IndexActivity extends AppCompatActivity implements View.OnClickList
         indexVP.setAdapter(new IndexPagerAdapter(this, page, title));
         pindao.setOnClickListener(this);
         dongtai.setOnClickListener(this);
+        indexDrawer.setOnClickListener(this);
     }
 
     public void init() {
@@ -97,6 +101,10 @@ public class IndexActivity extends AppCompatActivity implements View.OnClickList
                 Intent intent2 = new Intent(this, UserActivity.class);
                 startActivity(intent2);
                 finish();
+                break;
+            case R.id.indexDrawerIV:
+                DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+                drawer.openDrawer(Gravity.START);
                 break;
         }
     }

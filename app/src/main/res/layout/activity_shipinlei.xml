@@ -80,7 +80,7 @@
                     android:layout_height="30dp"
                     android:layout_gravity="center"
                     android:layout_marginRight="10dp"
-                    android:background="@drawable/shape"
+                    android:background="@drawable/round_corner_gray"
                     android:gravity="center"
                     android:text="关注"
                     android:textColor="#E5B483"/>
@@ -425,7 +425,7 @@
                 android:layout_gravity="center"
                 android:layout_marginLeft="10dp"
                 android:layout_weight="1"
-                android:background="@drawable/shape"
+                android:background="@drawable/round_corner_gray"
                 android:gravity="left|center"
                 android:text="   发表评论"
                 android:textSize="20dp" />

@@ -25,6 +25,8 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
 
+        loginIntent = new Intent(this, LoginActivity.class);
+
         editTextUn = (EditText) findViewById(R.id.signUpUsername);
         editTextPw = (EditText) findViewById(R.id.signUpPassword);
         sign2log = (TextView) findViewById(R.id.sign2log);
@@ -42,7 +44,6 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
 //                String password = editTextPw.getText().toString();
 //                String checkPassword = editTextPwCh.getText().toString();
 //                Toast.makeText(this, "账号：" + username + "\n" + "密码：" + password + "\n" + "确认密码：" + checkPassword, Toast.LENGTH_SHORT).show();
-                loginIntent = new Intent(this, LoginActivity.class);
                 startActivity(loginIntent);
                 finish();
                 break;

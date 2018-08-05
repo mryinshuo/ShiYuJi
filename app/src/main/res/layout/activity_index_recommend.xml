@@ -4,30 +4,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
-    <LinearLayout
-        android:id="@+id/paihangbang"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="0dp"
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="40dp"
-            android:layout_weight="1"
-            android:gravity="center" />
-
-        <ImageView
-            android:layout_width="20dp"
-            android:layout_height="40dp"
-            android:src="@drawable/paihangbang" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="40dp"
-            android:gravity="center"
-            android:text=" 排行榜 " />
-    </LinearLayout>
     <ListView
         android:id="@+id/indexLV"
         android:layout_width="match_parent"

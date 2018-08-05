@@ -6,11 +6,11 @@
     android:layout_height="match_parent"
     android:background="@drawable/beijing"
     tools:context="com.shiyuji.ChannelActivity">
-    <LinearLayout
+    <RelativeLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="9">
+        android:layout_weight="11">
         <ScrollView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
@@ -96,7 +96,8 @@
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true">
             <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
@@ -120,7 +121,7 @@
                     android:background="@drawable/background2"/>
             </LinearLayout>
         </LinearLayout>
-    </LinearLayout>
+    </RelativeLayout>
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"

@@ -7,61 +7,36 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.RadioButton;
 
-public class UserActivity extends AppCompatActivity implements View.OnClickListener {
+import com.shiyuji.adapter.UserItemAdapter;
+import com.shiyuji.model.TrendsItem;
 
-    private ImageView zhuye;
-    private ImageView pindao;
-    private ImageView dongtai;
+import java.util.ArrayList;
+import java.util.List;
+
+public class UserActivity extends AppCompatActivity {
+
+    private ListView userLV;
+    private List<TrendsItem> items;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user);
 
-        zhuye = (ImageView) findViewById(R.id.bottom1_zhuye);
-        pindao = (ImageView) findViewById(R.id.bottom1_pindao);
-        dongtai = (ImageView) findViewById(R.id.bottom1_dongtai);
+        userLV = (ListView) findViewById(R.id.userLV);
 
-        zhuye.setOnClickListener(this);
-        pindao.setOnClickListener(this);
-
-        zhuye.setImageResource(R.drawable.zhuyedianjihou);
-        pindao.setImageResource(R.drawable.pindaodianjihou);
-        dongtai.setImageResource(R.drawable.dongtaidianjiqian);
+        init();
+        userLV.setAdapter(new UserItemAdapter(this, R.layout.trends_item, items));
+        userLV.addHeaderView(View.inflate(this, R.layout.activity_user_header, null));
     }
 
-    @Override
-    public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.bottom1_zhuye:
-                Intent intent1 = new Intent(UserActivity.this, IndexActivity.class);
-                startActivity(intent1);
-                finish();
-                break;
-            case R.id.bottom1_pindao:
-                Intent intent2 = new Intent(UserActivity.this, ChannelActivity.class);
-                startActivity(intent2);
-                finish();
-                break;
-        }
-    }
-
-    public void onBackPressed() {       // 当触摸返回键时
-        AlertDialog.Builder checkExit = new AlertDialog.Builder(this);      // 创建对话框
-        checkExit.setMessage("退出程序？");
-        checkExit.setCancelable(true);
-        checkExit.setPositiveButton("是", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialogInterface, int i) {
-                finish();                                                       // 选“是”则结束当前Activity
-            }
-        });
-        checkExit.setNegativeButton("否", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialogInterface, int i) {}      // 选“否”对话框消失
-        });
-        checkExit.show();       // 弹出对话框
+    public void init() {
+        items = new ArrayList<>();
+        items.add(new TrendsItem(R.drawable.xiaotupian, "暮雨寒鸦", "2018年5月18日", false, "今天亲眼看见了孟津剪纸，真是不枉此行。剪纸里面的人物形象生动，惟妙惟肖。分享一张剪纸照片，这个剪纸的名称为《红楼群芳图》。", R.drawable.xiaotupian, "1", "2", "3"));        items.add(new TrendsItem(R.drawable.xiaotupian, "暮雨寒鸦", "2018年5月18日", false, "今天亲眼看见了孟津剪纸，真是不枉此行。剪纸里面的人物形象生动，惟妙惟肖。分享一张剪纸照片，这个剪纸的名称为《红楼群芳图》。", R.drawable.xiaotupian, "1", "2", "3"));
+        items.add(new TrendsItem(R.drawable.xiaotupian, "暮雨寒鸦", "2018年5月17日", false, "今天亲眼看见了孟津剪纸，真是不枉此行。剪纸里面的人物形象生动，惟妙惟肖。分享一张剪纸照片，这个剪纸的名称为《红楼群芳图》。", R.drawable.xiaotupian, "1", "2", "3"));
+        items.add(new TrendsItem(R.drawable.xiaotupian, "暮雨寒鸦", "2018年5月16日", false, "今天亲眼看见了孟津剪纸，真是不枉此行。剪纸里面的人物形象生动，惟妙惟肖。分享一张剪纸照片，这个剪纸的名称为《红楼群芳图》。", R.drawable.xiaotupian, "1", "2", "3"));
     }
 }

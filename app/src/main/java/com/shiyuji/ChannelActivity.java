@@ -10,10 +10,12 @@ import android.view.View;
 
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.RadioButton;
+import android.widget.LinearLayout;
 
 public class ChannelActivity extends AppCompatActivity implements View.OnClickListener {
 
+    private LinearLayout titlebar;
+    private LinearLayout titlebarPrev;
     private Button literature;
     private Button music;
     private Button dancing;
@@ -36,6 +38,8 @@ public class ChannelActivity extends AppCompatActivity implements View.OnClickLi
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_channel);
 
+        titlebar = (LinearLayout) findViewById(R.id.titlebar);
+        titlebarPrev = (LinearLayout) findViewById(R.id.titlebarPrev);
         literature = (Button) findViewById(R.id.literature);
         music = (Button) findViewById(R.id.music);
         dancing = (Button) findViewById(R.id.dancing);
@@ -52,6 +56,7 @@ public class ChannelActivity extends AppCompatActivity implements View.OnClickLi
         pindao = (ImageView) findViewById(R.id.bottom1_pindao);
         dongtai = (ImageView) findViewById(R.id.bottom1_dongtai);
 
+        titlebarPrev.setOnClickListener(this);
         literature.setOnClickListener(this);
         music.setOnClickListener(this);
         dancing.setOnClickListener(this);
@@ -70,11 +75,17 @@ public class ChannelActivity extends AppCompatActivity implements View.OnClickLi
         dongtai.setImageResource(R.drawable.dongtaidianjihou);
         zhuye.setImageResource(R.drawable.zhuyedianjihou);
         pindao.setImageResource(R.drawable.pindaodianjiqian);
+
+        titlebar.setBackgroundResource(R.drawable.dingbu4);
+        titlebarPrev.removeViewAt(0);
+        titlebarPrev.setBackgroundResource(0);
     }
 
     @Override
     public void onClick(View view) {
         switch(view.getId()) {
+            case R.id.titlebarPrev:
+                break;
             case R.id.literature:
             case R.id.music:
             case R.id.dancing:
@@ -95,7 +106,7 @@ public class ChannelActivity extends AppCompatActivity implements View.OnClickLi
                 break;
             case R.id.shipinqua:
                 if (selected != null) {
-                    Intent intent = new Intent(ChannelActivity.this, channel_videoa.class);
+                    Intent intent = new Intent(ChannelActivity.this, VideosChannel.class);
                     intent.putExtra("title", selected.getText());
                     startActivity(intent);
                     selected.setBackgroundResource(R.drawable.pao271);
@@ -104,7 +115,7 @@ public class ChannelActivity extends AppCompatActivity implements View.OnClickLi
                 break;
             case R.id.taolun:
                 if (selected != null) {
-                    Intent intent = new Intent(ChannelActivity.this, Topics.class);
+                    Intent intent = new Intent(ChannelActivity.this, TopicsChannel.class);
                     intent.putExtra("title", selected.getText());
                     startActivity(intent);
                     selected.setBackgroundResource(R.drawable.pao271);
@@ -117,7 +128,7 @@ public class ChannelActivity extends AppCompatActivity implements View.OnClickLi
                 finish();
                 break;
             case R.id.bottom1_dongtai:
-                Intent intent2 = new Intent(ChannelActivity.this, UserActivity.class);
+                Intent intent2 = new Intent(ChannelActivity.this, TrendsActivity.class);
                 startActivity(intent2);
                 finish();
                 break;

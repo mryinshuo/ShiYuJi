@@ -1,6 +1,7 @@
 package com.shiyuji.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
@@ -9,15 +10,15 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.shiyuji.R;
 import com.shiyuji.model.IndexItem;
+import com.shiyuji.VideoDetailActivity;
 
 import java.util.List;
 
 public class IndexItemAdapter extends ArrayAdapter {
-    private final int resourceId;           // 当前视图id
+    private final int resourceId;
     private Context context;
     private LayoutInflater inflater;
     private List<IndexItem> items;
@@ -54,13 +55,15 @@ public class IndexItemAdapter extends ArrayAdapter {
         view.findViewById(R.id.CV1).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(context, "CardView1", Toast.LENGTH_SHORT).show();
+                Intent intent1 = new Intent(context, VideoDetailActivity.class);
+                context.startActivity(intent1);
             }
         });
         view.findViewById(R.id.CV2).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(context, "CardView2", Toast.LENGTH_SHORT).show();
+                Intent intent2 = new Intent(context, VideoDetailActivity.class);
+                context.startActivity(intent2);
             }
         });
 

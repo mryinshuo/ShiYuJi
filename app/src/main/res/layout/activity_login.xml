@@ -85,15 +85,14 @@
                         android:id="@+id/findPw"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
+                        android:paddingVertical="10dp"
                         android:text="@string/forgetPw"
                         android:textAlignment="center"/>
                 </LinearLayout>
                 <Button
                     android:id="@+id/loginButton"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginVertical="15dp"
                     android:text="@string/login"
                     android:textSize="18sp"
                     android:textColor="@color/gray"
@@ -102,6 +101,7 @@
                     android:id="@+id/log2sign"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:paddingVertical="10dp"
                     android:text="@string/log2sign"
                     android:textAlignment="center"/>
             </LinearLayout>

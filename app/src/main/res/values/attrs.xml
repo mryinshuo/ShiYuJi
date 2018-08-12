@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <declare-styleable name="SettingTitlebar">
-        <!--文字-->
+    <declare-styleable name="Titlebar">
+        <!--标题-->
         <attr name="titlebarText" format="string"/>
+    </declare-styleable>
+
+    <declare-styleable name="TitlebarSearch">
+        <!--标题-->
+        <attr name="titlebarSText" format="string"/>
     </declare-styleable>
 </resources>

@@ -65,9 +65,9 @@
                 </LinearLayout>
                 <Button
                     android:id="@+id/signUpButton"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginVertical="15dp"
+                    android:layout_marginTop="10dp"
                     android:text="@string/signUp"
                     android:textSize="18sp"
                     android:textColor="@color/gray"
@@ -76,6 +76,7 @@
                     android:id="@+id/sign2log"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:paddingVertical="10dp"
                     android:text="@string/sign2log"
                     android:textAlignment="center"/>
             </LinearLayout>

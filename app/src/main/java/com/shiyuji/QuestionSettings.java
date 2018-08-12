@@ -50,9 +50,9 @@ public class QuestionSettings extends AppCompatActivity implements AdapterView.O
             TextView answer = new TextView(this);                                                   // 创建答案TextView
             answer.setId(R.id.answerTV);                                                                    // 设置id（方便remove）
             answer.setText("答：" + itemList.get(i).getAnswer());                                           // 设置答案内容
-            answer.setTextSize((int) DisplayUtil.dp2px(this, 6));                               //  设置字体大小
+            answer.setTextSize((int) Utils.dp2px(this, 6));                               //  设置字体大小
             answer.setBackgroundColor(Color.parseColor("#EEEEEE"));                              // 设置背景颜色
-            answer.setPadding((int) DisplayUtil.dp2px(this, 24), (int) DisplayUtil.dp2px(this, 10), (int) DisplayUtil.dp2px(this, 24), (int) DisplayUtil.dp2px(this, 10));    // 设置左padding
+            answer.setPadding((int) Utils.dp2px(this, 24), (int) Utils.dp2px(this, 10), (int) Utils.dp2px(this, 24), (int) Utils.dp2px(this, 10));    // 设置左padding
             questionItemLL.addView(answer, 1);                                                        // 将答案TextView添加在问题下面（1相对于item）
         } else {                                                                                        // 若问题已展开
             itemList.get(i).setExpanded(false);                                                             // 将isExpanded设置为false（问题未展开）

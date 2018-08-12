@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    android:orientation="vertical">
+
+    <com.shiyuji.TitlebarSearch
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        app:titlebarSText="传统音乐" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="11"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/zhankai"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:background="#d1d1d0d0"
+                android:text="展开" />
+
+            <HorizontalScrollView
+                android:id="@+id/hs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:id="@+id/liner"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="#cff1e5bb"
+                        android:paddingStart="8dp"
+                        android:text="@string/chuanyuea1"
+                        android:textAlignment="center" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="#cff1e5bb"
+                        android:paddingStart="8dp"
+                        android:text="@string/chuanyuea2" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="#cff1e5bb"
+                        android:paddingStart="8dp"
+                        android:text="@string/chuanyuea3" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="#cff1e5bb"
+                        android:paddingStart="8dp"
+                        android:text="@string/chuanyuea4" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="#cff1e5bb"
+                        android:paddingStart="8dp"
+                        android:text="@string/chuanyuea5" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="#cff1e5bb"
+                        android:paddingStart="8dp"
+                        android:text="@string/chuanyuea6" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="#cff1e5bb"
+                        android:paddingStart="8dp"
+                        android:text="@string/chuanyuea7" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="#cff1e5bb"
+                        android:paddingStart="8dp"
+                        android:text="@string/chuanyuea8" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="#cff1e5bb"
+                        android:paddingStart="8dp"
+                        android:text="@string/chuanyuea9" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="#cff1e5bb"
+                        android:paddingStart="8dp"
+                        android:text="@string/chuanyuea10" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="#cff1e5bb"
+                        android:paddingStart="8dp"
+                        android:text="@string/chuanyuea11" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="#cff1e5bb"
+                        android:paddingStart="8dp"
+                        android:text="@string/chuanyuea12" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="#cff1e5bb"
+                        android:paddingStart="8dp"
+                        android:text="@string/chuanyuea13" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="#cff1e5bb"
+                        android:paddingStart="8dp"
+                        android:text="@string/chuanyuea14" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="#cff1e5bb"
+                        android:paddingStart="8dp"
+                        android:text="@string/chuanyuea15" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="#cff1e5bb"
+                        android:paddingStart="8dp"
+                        android:text="@string/chuanyuea16" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="#cff1e5bb"
+                        android:paddingStart="8dp"
+                        android:paddingEnd="68dp"
+                        android:text="@string/chuanyuea17" />
+
+                </LinearLayout>
+            </HorizontalScrollView>
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="10dp"
+                    android:src="@drawable/hequminge" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center">
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:minHeight="0dp"
+                        android:background="@drawable/round_corner_gray"
+                        android:padding="8dp"
+                        android:text="成为传承人"
+                        android:textColor="#E5B483"
+                        android:textSize="16sp" />
+
+                    <Button
+                        android:id="@+id/ChannelVideosInheritor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:minHeight="0dp"
+                        android:layout_marginStart="20dp"
+                        android:background="@drawable/round_corner_gray"
+                        android:padding="8dp"
+                        android:text="现有传承人"
+                        android:textColor="#E5B483"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:text="         河曲民歌是一种传统民歌音乐。山西人文地理环境形成了当地老百姓每年春去冬回，到内蒙古大青山、河套一带打短工、拉长工的“走西口”生活生产方式。由这种年复一年的离妻别子的痛苦人生中自然产生了咏叹人间离苦、别绪、思念、期盼的“走西口”民歌，当地人称之为“山曲”。山曲的曲调则运用并置、呼应、对比等两句体，蕴含有丰富的美学意味。在反映中国民歌发展历史与中国民间社会生活状况方面，也具有典型的意义。"
+                    android:textColor="#E5B483"
+                    android:textSize="17sp" />
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/channelVideosVP"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1">
+
+                    <android.support.v4.view.PagerTitleStrip
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top"
+                        android:background="@color/white"
+                        android:paddingVertical="7dp"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="18sp" />
+                </android.support.v4.view.ViewPager>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</LinearLayout>

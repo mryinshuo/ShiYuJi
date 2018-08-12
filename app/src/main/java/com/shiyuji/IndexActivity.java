@@ -98,7 +98,7 @@ public class IndexActivity extends AppCompatActivity implements View.OnClickList
                 finish();
                 break;
             case R.id.bottom1_dongtai:
-                Intent intent2 = new Intent(this, UserActivity.class);
+                Intent intent2 = new Intent(this, TrendsActivity.class);
                 startActivity(intent2);
                 finish();
                 break;
@@ -109,27 +109,11 @@ public class IndexActivity extends AppCompatActivity implements View.OnClickList
         }
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.main2, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.action_settings:
-                return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
-
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         switch (item.getItemId()) {
-            case R.id.nav_slideshow:
+            case R.id.nav_settings:
                 Intent intent = new Intent(this, Settings.class);
                 startActivity(intent);
                 break;

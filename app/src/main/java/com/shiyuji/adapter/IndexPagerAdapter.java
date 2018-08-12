@@ -1,16 +1,18 @@
 package com.shiyuji.adapter;
 
 import android.content.Context;
+import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.view.PagerAdapter;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
 
 import com.shiyuji.R;
 import com.shiyuji.model.IndexItem;
-import com.shiyuji.model.NearbyItem;
+import com.shiyuji.model.TrendsItem;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,7 +24,10 @@ public class IndexPagerAdapter extends PagerAdapter {
     private List<String> title;
     private List<IndexItem> recommendItems;
     private List<IndexItem> liveItems;
-    private List<NearbyItem> nearbyItems;
+    private List<TrendsItem> trendsItems;
+    private SwipeRefreshLayout recommendSRL;
+    private SwipeRefreshLayout liveSRL;
+    private SwipeRefreshLayout nearbySRL;
 
     public IndexPagerAdapter(Context context, List<Integer> list, List<String> title) {
         this.context = context;
@@ -43,10 +48,10 @@ public class IndexPagerAdapter extends PagerAdapter {
         liveItems.add(new IndexItem(R.drawable.huagu, "山西省翼城花鼓正在直播...", R.drawable.puningyingge, "广东省普宁英歌正在直播..."));
         liveItems.add(new IndexItem(R.drawable.shiwu, "舞狮子表演正在直播...", R.drawable.yangge, "秧歌舞正在直播..."));
 
-        nearbyItems = new ArrayList<>();
-        nearbyItems.add(new NearbyItem(R.drawable.chuanju, "豫酱", false, "豫剧起源于中原（河南），是中国五大戏曲剧种之一、中国第一大地方剧种，在浙江各地也广为流传。", R.drawable.yuju, "10", "11", "12"));
-        nearbyItems.add(new NearbyItem(R.drawable.guqinyishu, "诗琴", false, "古琴艺术是继昆曲之后被列入“人类口头与非物质遗产”的第二个中国文化门类。琴棋书画，曾是中国古代文人引以为傲的四项技能，也是四种艺术。", R.drawable.guqinyishu, "20", "21", "22"));
-        nearbyItems.add(new NearbyItem(R.drawable.kunqu, "豫乡情", true, "龙舞，也称“舞龙”，民间又叫“耍龙”、“耍龙灯”或“舞龙灯”，中国传统民间舞蹈之一，在全国各地广泛分布，其形式品种的多样，是任何其他民间舞都无法比拟的。", R.drawable.wulong, "30", "31", "32"));
+        trendsItems = new ArrayList<>();
+        trendsItems.add(new TrendsItem(R.drawable.chuanju, "豫酱", "今天20:03", false, "豫剧起源于中原（河南），是中国五大戏曲剧种之一、中国第一大地方剧种，在浙江各地也广为流传。", R.drawable.yuju, "10", "11", "12"));
+        trendsItems.add(new TrendsItem(R.drawable.guqinyishu, "诗琴", "今天20:02", false, "古琴艺术是继昆曲之后被列入“人类口头与非物质遗产”的第二个中国文化门类。琴棋书画，曾是中国古代文人引以为傲的四项技能，也是四种艺术。", R.drawable.guqinyishu, "20", "21", "22"));
+        trendsItems.add(new TrendsItem(R.drawable.kunqu, "豫乡情", "今天20:01", true, "龙舞，也称“舞龙”，民间又叫“耍龙”、“耍龙灯”或“舞龙灯”，中国传统民间舞蹈之一，在全国各地广泛分布，其形式品种的多样，是任何其他民间舞都无法比拟的。", R.drawable.wulong, "30", "31", "32"));
     }
 
     @NonNull
@@ -60,14 +65,59 @@ public class IndexPagerAdapter extends PagerAdapter {
             recommendLV.setAdapter(new IndexItemAdapter(context, R.layout.activity_index_item, recommendItems));
             recommendLV.setDivider(null);
             recommendLV.addHeaderView(View.inflate(context, R.layout.activity_recommend_header, null));
+
+            recommendSRL = (SwipeRefreshLayout) view.findViewById(R.id.recommendSRL);
+            recommendSRL.setColorSchemeResources(R.color.colorPrimary, R.color.colorPrimaryDark);
+            recommendSRL.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+                @Override
+                public void onRefresh() {
+                    recommendSRL.setRefreshing(true);
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            recommendSRL.setRefreshing(false);
+                        }
+                    }, 800);
+                }
+            });
         } else if (item == R.layout.activity_index_live) {
             ListView liveLV = (ListView) view.findViewById(R.id.liveLV);
             liveLV.setAdapter(new IndexItemAdapter(context, R.layout.activity_index_item, liveItems));
             liveLV.setDivider(null);
+
+            liveSRL = (SwipeRefreshLayout) view.findViewById(R.id.liveSRL);
+            liveSRL.setColorSchemeResources(R.color.colorPrimary, R.color.colorPrimaryDark);
+            liveSRL.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+                @Override
+                public void onRefresh() {
+                    liveSRL.setRefreshing(true);
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            liveSRL.setRefreshing(false);
+                        }
+                    }, 800);
+                }
+            });
         } else if (item == R.layout.activity_index_nearby) {
             ListView nearbyLV = (ListView) view.findViewById(R.id.nearbyLV);
-            nearbyLV.setAdapter(new NearbyItemAdapter(context, R.layout.activity_nearby_item, nearbyItems));
+            nearbyLV.setAdapter(new TrendsItemAdapter(context, R.layout.trends_item, trendsItems));
             nearbyLV.addHeaderView(View.inflate(context, R.layout.activity_nearby_header, null));
+
+            nearbySRL = (SwipeRefreshLayout) view.findViewById(R.id.nearbySRL);
+            nearbySRL.setColorSchemeResources(R.color.colorPrimary, R.color.colorPrimaryDark);
+            nearbySRL.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+                @Override
+                public void onRefresh() {
+                    nearbySRL.setRefreshing(true);
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            nearbySRL.setRefreshing(false);
+                        }
+                    }, 800);
+                }
+            });
         }
         container.addView(view);
         return view;

@@ -34,25 +34,20 @@
             android:windowSoftInputMode="adjustPan" />
 
         <!-- GZQ -->
-        <activity
-            android:name=".Main1Activity"
-            android:windowSoftInputMode="stateHidden|adjustResize" />
         <activity android:name=".UserActivity" />
-        <activity android:name=".User2Activity" />
 
         <!-- YCH -->
-        <activity android:name=".shipinleiActivity" />
-        <activity android:name=".feiyibiaoqian" />
-        <activity android:name=".sousuo" />
-        <activity android:name=".zhibo" />
+        <activity android:name=".VideoDetailActivity" />
 
         <!-- LJY -->
-        <activity android:name=".Topics" />
-        <activity android:name=".Write" />
+        <activity android:name=".TopicsChannel" />
+        <activity android:name=".EditTopicChannel" />
         <activity android:name=".ChannelActivity" />
-        <activity android:name=".channel_videoa" />
-        <activity android:name=".self_write" />
-        <activity android:name=".IndexActivity"></activity>
+        <activity android:name=".VideosChannel" />
+        <activity android:name=".TopicDetailActivity" />
+        <activity android:name=".IndexActivity" />
+        <activity android:name=".TrendsActivity" />
+        <activity android:name=".InheritorVideosChannel"></activity>
     </application>
 
 </manifest>

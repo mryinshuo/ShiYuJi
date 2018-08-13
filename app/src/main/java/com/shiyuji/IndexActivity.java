@@ -14,8 +14,10 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.RadioButton;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.shiyuji.adapter.IndexItemAdapter;
@@ -30,10 +32,9 @@ public class IndexActivity extends AppCompatActivity implements View.OnClickList
     private List<Integer> page;
     private List<String> title;
     private ViewPager indexVP;
-    private ImageView zhuye;
-    private ImageView pindao;
-    private ImageView dongtai;
     private ImageView indexDrawer;
+    private LinearLayout channel;
+    private LinearLayout trends;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,21 +44,17 @@ public class IndexActivity extends AppCompatActivity implements View.OnClickList
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        zhuye = (ImageView) findViewById(R.id.bottom1_zhuye);
-        pindao = (ImageView) findViewById(R.id.bottom1_pindao);
-        dongtai = (ImageView) findViewById(R.id.bottom1_dongtai);
         indexDrawer = (ImageView) findViewById(R.id.indexDrawerIV);
+        channel = (LinearLayout) findViewById(R.id.indexChannel);
+        trends = (LinearLayout) findViewById(R.id.indexTrends);
 
-        pindao.setImageResource(R.drawable.pindaodianjihou);
-        dongtai.setImageResource(R.drawable.dongtaidianjihou);
-        zhuye.setImageResource(R.drawable.zhuyedianjiqian);
+        channel.setOnClickListener(this);
+        trends.setOnClickListener(this);
+        indexDrawer.setOnClickListener(this);
 
         init();
         indexVP = (ViewPager) findViewById(R.id.indexVP);
         indexVP.setAdapter(new IndexPagerAdapter(this, page, title));
-        pindao.setOnClickListener(this);
-        dongtai.setOnClickListener(this);
-        indexDrawer.setOnClickListener(this);
     }
 
     public void init() {
@@ -92,12 +89,12 @@ public class IndexActivity extends AppCompatActivity implements View.OnClickList
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.bottom1_pindao:
+            case R.id.indexChannel:
                 Intent intent1 = new Intent(this, ChannelActivity.class);
                 startActivity(intent1);
                 finish();
                 break;
-            case R.id.bottom1_dongtai:
+            case R.id.indexTrends:
                 Intent intent2 = new Intent(this, TrendsActivity.class);
                 startActivity(intent2);
                 finish();

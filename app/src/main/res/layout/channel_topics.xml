@@ -55,8 +55,8 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         android:layout_margin="@dimen/fab_margin"
-        app:borderWidth="0dp"
-        app:srcCompat="@android:drawable/ic_input_add">
+        android:src="@drawable/float_add"
+        app:borderWidth="0dp">
 
     </android.support.design.widget.FloatingActionButton>
 

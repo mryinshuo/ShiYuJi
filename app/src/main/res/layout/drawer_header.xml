@@ -7,7 +7,7 @@
     android:background="@drawable/zhuyebeijing"
     android:orientation="vertical">
 
-        <ImageView
+        <com.shiyuji.CircleImageView
             android:id="@+id/imageView"
             android:layout_width="80dp"
             android:layout_height="80dp"

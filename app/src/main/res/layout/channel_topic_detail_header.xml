@@ -2,6 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:background="@color/gray"
     android:orientation="vertical"
     android:paddingVertical="10dp">
 
@@ -9,7 +10,6 @@
         android:id="@+id/topicDetailInfoLL"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/gray"
         android:gravity="center_vertical">
 
         <ImageView
@@ -72,24 +72,24 @@
         android:id="@+id/topicDetailText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="70dp"
+        android:layout_below="@+id/topicDetailInfoLL"
         android:layout_marginEnd="20dp"
+        android:layout_marginStart="70dp"
         android:layout_marginVertical="5dp"
         android:text="咏叹了人间离苦、别绪、思念、期盼！"
-        android:textSize="18sp"
-        android:layout_below="@+id/topicDetailInfoLL"/>
+        android:textSize="18sp" />
 
     <ImageView
         android:id="@+id/topicDetailImage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/topicDetailText"/>
+        android:layout_below="@+id/topicDetailText" />
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="70dp"
-        android:layout_below="@+id/topicDetailImage">
+        android:layout_below="@+id/topicDetailImage"
+        android:layout_marginStart="70dp">
 
         <LinearLayout
             android:layout_width="wrap_content"

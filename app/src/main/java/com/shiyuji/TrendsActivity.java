@@ -23,9 +23,8 @@ public class TrendsActivity extends AppCompatActivity implements View.OnClickLis
     private LinearLayout titlebar;
     private LinearLayout titlebarPrev;
     private ListView trendsLV;
-    private ImageView zhuye;
-    private ImageView pindao;
-    private ImageView dongtai;
+    private LinearLayout index;
+    private LinearLayout channel;
     private SwipeRefreshLayout trendsSRL;
     private List<TrendsItem> items;
 
@@ -42,22 +41,17 @@ public class TrendsActivity extends AppCompatActivity implements View.OnClickLis
         setContentView(R.layout.activity_trends);
 
         titlebar = (LinearLayout) findViewById(R.id.titlebar);
-        titlebar.setBackgroundResource(R.drawable.dingbu2);
+        titlebar.setBackgroundResource(R.drawable.dingbu);
         titlebarPrev = (LinearLayout) findViewById(R.id.titlebarPrev);
         titlebarPrev.setOnClickListener(this);
-        titlebarPrev.removeViewAt(0);
         titlebarPrev.setBackgroundResource(0);
+        titlebarPrev.removeViewAt(0);
 
-        zhuye = (ImageView) findViewById(R.id.bottom1_zhuye);
-        pindao = (ImageView) findViewById(R.id.bottom1_pindao);
-        dongtai = (ImageView) findViewById(R.id.bottom1_dongtai);
+        index = (LinearLayout) findViewById(R.id.trendsIndex);
+        channel = (LinearLayout) findViewById(R.id.trendsChannel);
 
-        pindao.setImageResource(R.drawable.pindaodianjihou);
-        zhuye.setImageResource(R.drawable.zhuyedianjihou);
-        dongtai.setImageResource(R.drawable.dongtaidianjiqian);
-
-        zhuye.setOnClickListener(this);
-        pindao.setOnClickListener(this);
+        index.setOnClickListener(this);
+        channel.setOnClickListener(this);
 
         init();
         trendsLV = (ListView) findViewById(R.id.trendsLV);
@@ -85,12 +79,12 @@ public class TrendsActivity extends AppCompatActivity implements View.OnClickLis
         switch (v.getId()) {
             case R.id.titlebarPrev:
                 break;
-            case R.id.bottom1_zhuye:
+            case R.id.trendsIndex:
                 Intent intent1 = new Intent(this, IndexActivity.class);
                 startActivity(intent1);
                 finish();
                 break;
-            case R.id.bottom1_pindao:
+            case R.id.trendsChannel:
                 Intent intent2 = new Intent(this, ChannelActivity.class);
                 startActivity(intent2);
                 finish();

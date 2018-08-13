@@ -10,63 +10,97 @@
         android:id="@+id/CV1"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_margin="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginVertical="5dp"
         android:layout_weight="1"
         android:foreground="?android:attr/selectableItemBackground"
-        app:cardBackgroundColor="@color/gray"
+        app:cardBackgroundColor="@color/white"
         app:cardCornerRadius="10dp"
         app:cardElevation="2dp"
         app:cardPreventCornerOverlap="false">
 
-        <LinearLayout
+        <RelativeLayout
+            android:id="@+id/itemLL1"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="start"
-            android:orientation="vertical">
+            android:layout_height="190dp"
+            android:gravity="start">
 
             <ImageView
                 android:id="@+id/indexIV1"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+                android:layout_height="125dp"
+                android:scaleType="fitXY" />
 
             <TextView
                 android:id="@+id/indexTV1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAlignment="center"
-                android:textSize="18sp" />
-        </LinearLayout>
+                android:layout_below="@+id/indexIV1"
+                android:paddingTop="3dp"
+                android:paddingHorizontal="8dp"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/indexTagTV1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="3dp"
+                android:paddingHorizontal="8dp"
+                android:text="标签"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="14sp" />
+        </RelativeLayout>
     </android.support.v7.widget.CardView>
 
     <android.support.v7.widget.CardView
         android:id="@+id/CV2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_margin="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginVertical="5dp"
         android:layout_weight="1"
         android:foreground="?android:attr/selectableItemBackground"
-        app:cardBackgroundColor="@color/gray"
+        app:cardBackgroundColor="@color/white"
         app:cardCornerRadius="10dp"
         app:cardElevation="2dp"
         app:cardPreventCornerOverlap="false">
 
-        <LinearLayout
+        <RelativeLayout
+            android:id="@+id/itemLL2"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:orientation="vertical">
+            android:layout_height="190dp"
+            android:gravity="start">
 
             <ImageView
                 android:id="@+id/indexIV2"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+                android:layout_height="125dp"
+                android:scaleType="fitXY" />
 
             <TextView
                 android:id="@+id/indexTV2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAlignment="center"
-                android:textSize="18sp" />
-        </LinearLayout>
+                android:layout_below="@+id/indexIV2"
+                android:paddingTop="3dp"
+                android:paddingHorizontal="8dp"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/indexTagTV2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="3dp"
+                android:paddingHorizontal="8dp"
+                android:text="标签"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="14sp" />
+        </RelativeLayout>
     </android.support.v7.widget.CardView>
 </LinearLayout>

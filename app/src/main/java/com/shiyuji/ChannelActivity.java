@@ -9,7 +9,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 public class ChannelActivity extends AppCompatActivity implements View.OnClickListener {
@@ -26,11 +25,11 @@ public class ChannelActivity extends AppCompatActivity implements View.OnClickLi
     private Button tradition;
     private Button medicine;
     private Button folk;
-    private Button shipinqua;
-    private Button taolun;
-    private ImageView zhuye;
-    private ImageView pindao;
-    private ImageView dongtai;
+    private LinearLayout channelVideos;
+    private LinearLayout channelTopics;
+    private LinearLayout choose;
+    private LinearLayout index;
+    private LinearLayout trends;
     private Button selected = null;
 
     @Override
@@ -50,11 +49,11 @@ public class ChannelActivity extends AppCompatActivity implements View.OnClickLi
         tradition = (Button) findViewById(R.id.tradition);
         medicine = (Button) findViewById(R.id.medicine);
         folk = (Button) findViewById(R.id.folk);
-        shipinqua = (Button) findViewById(R.id.shipinqua);
-        taolun = (Button) findViewById(R.id.taolun);
-        zhuye = (ImageView) findViewById(R.id.bottom1_zhuye);
-        pindao = (ImageView) findViewById(R.id.bottom1_pindao);
-        dongtai = (ImageView) findViewById(R.id.bottom1_dongtai);
+        channelTopics = (LinearLayout) findViewById(R.id.channelTopics);
+        channelVideos = (LinearLayout) findViewById(R.id.channelVideos);
+        choose = (LinearLayout) findViewById(R.id.channelChooseLL);
+        index = (LinearLayout) findViewById(R.id.channelIndex);
+        trends = (LinearLayout) findViewById(R.id.channelTrends);
 
         titlebarPrev.setOnClickListener(this);
         literature.setOnClickListener(this);
@@ -67,18 +66,14 @@ public class ChannelActivity extends AppCompatActivity implements View.OnClickLi
         tradition.setOnClickListener(this);
         medicine.setOnClickListener(this);
         folk.setOnClickListener(this);
-        shipinqua.setOnClickListener(this);
-        taolun.setOnClickListener(this);
-        zhuye.setOnClickListener(this);
-        dongtai.setOnClickListener(this);
+        channelTopics.setOnClickListener(this);
+        channelVideos.setOnClickListener(this);
+        index.setOnClickListener(this);
+        trends.setOnClickListener(this);
 
-        dongtai.setImageResource(R.drawable.dongtaidianjihou);
-        zhuye.setImageResource(R.drawable.zhuyedianjihou);
-        pindao.setImageResource(R.drawable.pindaodianjiqian);
-
-        titlebar.setBackgroundResource(R.drawable.dingbu4);
-        titlebarPrev.removeViewAt(0);
+        titlebar.setBackgroundResource(R.drawable.dingbu);
         titlebarPrev.setBackgroundResource(0);
+        titlebarPrev.removeViewAt(0);
     }
 
     @Override
@@ -99,35 +94,39 @@ public class ChannelActivity extends AppCompatActivity implements View.OnClickLi
                 if (selected == null) {
                     view.setBackgroundResource(R.drawable.pao271after);
                     selected = (Button) view;
+                    choose.setVisibility(View.VISIBLE);
                 } else if (view == selected) {
                     view.setBackgroundResource(R.drawable.pao271);
                     selected = null;
+                    choose.setVisibility(View.INVISIBLE);
                 }
                 break;
-            case R.id.shipinqua:
-                if (selected != null) {
-                    Intent intent = new Intent(ChannelActivity.this, VideosChannel.class);
-                    intent.putExtra("title", selected.getText());
-                    startActivity(intent);
-                    selected.setBackgroundResource(R.drawable.pao271);
-                    selected = null;
-                }
-                break;
-            case R.id.taolun:
+            case R.id.channelTopics:
                 if (selected != null) {
                     Intent intent = new Intent(ChannelActivity.this, TopicsChannel.class);
                     intent.putExtra("title", selected.getText());
                     startActivity(intent);
                     selected.setBackgroundResource(R.drawable.pao271);
                     selected = null;
+                    choose.setVisibility(View.INVISIBLE);
                 }
                 break;
-            case R.id.bottom1_zhuye:
+            case R.id.channelVideos:
+                if (selected != null) {
+                    Intent intent = new Intent(ChannelActivity.this, VideosChannel.class);
+                    intent.putExtra("title", selected.getText());
+                    startActivity(intent);
+                    selected.setBackgroundResource(R.drawable.pao271);
+                    selected = null;
+                    choose.setVisibility(View.INVISIBLE);
+                }
+                break;
+            case R.id.channelIndex:
                 Intent intent1 = new Intent(ChannelActivity.this, IndexActivity.class);
                 startActivity(intent1);
                 finish();
                 break;
-            case R.id.bottom1_dongtai:
+            case R.id.channelTrends:
                 Intent intent2 = new Intent(ChannelActivity.this, TrendsActivity.class);
                 startActivity(intent2);
                 finish();

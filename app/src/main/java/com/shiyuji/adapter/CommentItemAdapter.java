@@ -74,7 +74,7 @@ public class CommentItemAdapter extends ArrayAdapter {
             v.setText("已关注");
             v.setTextColor(context.getResources().getColor(R.color.gray));
         } else {
-            v.setText("关注");
+            v.setText("+ 关注");
             v.setTextColor(context.getResources().getColor(R.color.colorPrimary));
         }
     }

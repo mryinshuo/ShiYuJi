@@ -87,7 +87,7 @@ public class VideoDetailHeaderItem extends LinearLayout {
             followTV.setTextColor(getResources().getColor(R.color.gray));
             isFollowed = true;
         } else {
-            followTV.setText("关注");
+            followTV.setText("+ 关注");
             followTV.setTextColor(getResources().getColor(R.color.colorPrimary));
             isFollowed = false;
         }

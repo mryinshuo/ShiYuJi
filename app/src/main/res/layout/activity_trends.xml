@@ -28,40 +28,68 @@
                 android:background="@drawable/beijing"/>
         </android.support.v4.widget.SwipeRefreshLayout>
         <LinearLayout
-            android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:background="@drawable/dibu">
+            android:background="@drawable/dibu"
+            android:orientation="horizontal">
+
             <LinearLayout
+                android:id="@+id/trendsIndex"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1">
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
                 <ImageView
-                    android:id="@+id/bottom1_zhuye"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:src="@drawable/zhuyedianjihou" />
+
+                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/xuanxiangka_zhuye" />
+                    android:text="主页"/>
             </LinearLayout>
+
             <LinearLayout
+                android:id="@+id/trendsChannel"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1">
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
                 <ImageView
-                    android:id="@+id/bottom1_pindao"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:src="@drawable/pindaodianjihou" />
+
+                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/xuanxiangka_pindao"/>
+                    android:text="频道"/>
             </LinearLayout>
+
             <LinearLayout
+                android:id="@+id/trendsTrends"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1">
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
                 <ImageView
-                    android:id="@+id/bottom1_dongtai"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:src="@drawable/dongtaidianjiqian" />
+
+                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/xuanxiangka_dongtai"/>
+                    android:text="动态"
+                    android:textColor="@color/colorPrimary"/>
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>

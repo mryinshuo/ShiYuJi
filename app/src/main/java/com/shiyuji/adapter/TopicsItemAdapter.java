@@ -31,16 +31,17 @@ public class TopicsItemAdapter extends ArrayAdapter {
         TopicsItem item = (TopicsItem) getItem(position);
         View view = LayoutInflater.from(getContext()).inflate(resourceId, null);
 
-        TextView trendsTitle = (TextView) view.findViewById(R.id.trendsTitle);
-        trendsTitle.setText(item.getTitle());
-        TextView trendsContent = (TextView) view.findViewById(R.id.trendsContent);
-        trendsContent.setText(item.getContent());
-        ImageView trendsImg = (ImageView) view.findViewById(R.id.trendsImg);
+        ((TextView) view.findViewById(R.id.topicsTitle)).setText(item.getTitle());
+        ((TextView) view.findViewById(R.id.topicsContent)).setText(item.getContent());
+        ImageView topicsImg = (ImageView) view.findViewById(R.id.topicsImg);
         if (item.getImg() != 0) {
-            trendsImg.setImageResource(item.getImg());
+            topicsImg.setImageResource(item.getImg());
         } else {
-            ((LinearLayout) view.findViewById(R.id.trendsLL)).removeView(trendsImg);
+            ((LinearLayout) view.findViewById(R.id.topicsLL)).removeView(topicsImg);
         }
+        ((TextView) view.findViewById(R.id.topicsLikeNum)).setText(item.getLikeNum());
+        ((TextView) view.findViewById(R.id.topicsCommentNum)).setText(item.getCommentNum());
+        ((TextView) view.findViewById(R.id.topicsShareNum)).setText(item.getShareNum());
 
         return view;
     }

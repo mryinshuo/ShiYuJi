@@ -4,6 +4,13 @@
     <color name="colorAccent">#8B6A43</color>
     <color name="colorPrimary">#AF9467</color>
     <color name="colorPrimaryDark">#8B6A43</color>
+
+    <!--<color name="colorPrimary">#EEC273</color>-->
+    <!--<color name="colorPrimaryDark">#EEC273</color>-->
+
+    <!--<color name="colorPrimary">#E0AD52</color>-->
+    <!--<color name="colorPrimaryDark">#E5E5E5</color>-->
+
     <color name="white">#FFF</color>
     <color name="black">#000</color>
     <color name="gray">#EEE</color>

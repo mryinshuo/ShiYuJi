@@ -79,11 +79,10 @@ public class TopicsChannel extends AppCompatActivity implements AdapterView.OnIt
     }
 
     private void initItems() {
-        itemList.add(new TopicsItem("逗逗43组", "新人问一下，我国民族音乐中，四二，四三，四四拍又叫什么？(｡・`ω´･)", 0));
-        itemList.add(new TopicsItem("丨锴", "求《小刀会序曲》总谱!很喜欢这个曲子啊！！！", R.drawable.p1));
-        itemList.add(new TopicsItem("cool_gao", "古筝《如是》", R.drawable.g1));
-        itemList.add(new TopicsItem("cool_gao", "古筝《如是》", R.drawable.g1));
-        itemList.add(new TopicsItem("cool_gao", "古筝《如是》", R.drawable.g1));
+        itemList.add(new TopicsItem("逗逗43组", "新人问一下，我国民族音乐中，四二，四三，四四拍又叫什么？(｡・`ω´･)", 0, "10", "20", "30"));
+        itemList.add(new TopicsItem("丨锴", "求《小刀会序曲》总谱!很喜欢这个曲子啊！！！", R.drawable.p1, "11", "21", "31"));
+        itemList.add(new TopicsItem("cool_gao", "古筝《如是》", R.drawable.g1, "12", "22", "32"));
+        itemList.add(new TopicsItem("cool_gao", "古筝《如是》", R.drawable.g1, "12", "22", "32"));
     }
 
     @Override

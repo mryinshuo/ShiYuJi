@@ -17,11 +17,11 @@
             android:layout_height="wrap_content"
             android:src="@drawable/user_head" />
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="70dp"
-            android:layout_marginStart="70dp"
-            android:src="@drawable/tianjia" />
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="65dp"
+            android:layout_marginStart="65dp"
+            android:src="@drawable/float_add" />
     </RelativeLayout>
 
     <!--用户名称-->

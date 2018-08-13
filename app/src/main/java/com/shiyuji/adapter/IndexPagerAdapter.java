@@ -64,7 +64,6 @@ public class IndexPagerAdapter extends PagerAdapter {
             ListView recommendLV = (ListView) view.findViewById(R.id.indexLV);
             recommendLV.setAdapter(new IndexItemAdapter(context, R.layout.activity_index_item, recommendItems));
             recommendLV.setDivider(null);
-            recommendLV.addHeaderView(View.inflate(context, R.layout.activity_recommend_header, null));
 
             recommendSRL = (SwipeRefreshLayout) view.findViewById(R.id.recommendSRL);
             recommendSRL.setColorSchemeResources(R.color.colorPrimary, R.color.colorPrimaryDark);
@@ -101,7 +100,7 @@ public class IndexPagerAdapter extends PagerAdapter {
             });
         } else if (item == R.layout.activity_index_nearby) {
             ListView nearbyLV = (ListView) view.findViewById(R.id.nearbyLV);
-            nearbyLV.setAdapter(new TrendsItemAdapter(context, R.layout.trends_item, trendsItems));
+            nearbyLV.setAdapter(new NearbyItemAdapter(context, R.layout.trends_item, trendsItems));
             nearbyLV.addHeaderView(View.inflate(context, R.layout.activity_nearby_header, null));
 
             nearbySRL = (SwipeRefreshLayout) view.findViewById(R.id.nearbySRL);

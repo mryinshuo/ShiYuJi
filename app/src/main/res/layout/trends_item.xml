@@ -8,7 +8,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
-        <ImageView
+        <com.shiyuji.CircleImageView
             android:id="@+id/trendsHeadIV"
             android:layout_width="50dp"
             android:layout_height="50dp"
@@ -41,7 +41,6 @@
             android:layout_weight="1"
             android:layout_gravity="center_vertical"
             android:background="@drawable/round_corner_gray"
-            android:text="+ 关注"
             android:textSize="15sp" />
     </LinearLayout>
     <LinearLayout
@@ -105,10 +104,5 @@
             android:layout_weight="2"
             android:paddingStart="5dp"
             android:gravity="center_vertical"/>
-        <Button
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_marginEnd="10dp"
-            android:background="@drawable/gengduo" />
     </LinearLayout>
 </LinearLayout>

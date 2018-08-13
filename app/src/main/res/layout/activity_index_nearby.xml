@@ -5,42 +5,9 @@
     android:layout_height="wrap_content"
     android:orientation="vertical">
 
-    <LinearLayout
+    <ListView
+        android:id="@+id/nearbyLV"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:orientation="horizontal">
-
-            <Button
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_gravity="center"
-                android:layout_marginLeft="10dp"
-                android:background="@drawable/weizhi" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="10dp"
-                android:gravity="center"
-                android:text="您的位置:开封市"
-                android:textColor="#E5B483"
-                android:textSize="20dp" />
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="fill_parent"
-                android:layout_weight="1" />
-        </LinearLayout>
-
-        <ListView
-            android:id="@+id/nearbyLV"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@drawable/beijing" />
-    </LinearLayout>
+        android:layout_height="match_parent"
+        android:background="@drawable/beijing" />
 </android.support.v4.widget.SwipeRefreshLayout>

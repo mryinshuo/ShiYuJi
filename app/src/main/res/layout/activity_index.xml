@@ -2,33 +2,35 @@
 <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
     <LinearLayout
-        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
         <LinearLayout
-            android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:background="@drawable/dingbu">
-            <ImageView
+            android:background="@drawable/dingbu"
+            android:orientation="horizontal">
+
+            <com.shiyuji.CircleImageView
                 android:id="@+id/indexDrawerIV"
                 android:layout_width="0dp"
                 android:layout_height="30dp"
-                android:layout_weight="1"
                 android:layout_gravity="center"
-                android:src="@drawable/gengduo" />
+                android:layout_weight="1"
+                android:src="@drawable/user_head" />
 
             <TextView
                 android:id="@+id/agree"
                 android:layout_width="0dp"
                 android:layout_height="30dp"
-                android:layout_weight="6"
                 android:layout_gravity="center"
-                android:gravity="center"
+                android:layout_weight="6"
                 android:background="@drawable/round_corner_gray"
+                android:gravity="center"
                 android:text="Find What You Like"
                 android:textColor="#ffffff"
                 android:textSize="20sp" />
@@ -36,8 +38,8 @@
             <ImageView
                 android:layout_width="0dp"
                 android:layout_height="30dp"
-                android:layout_weight="1"
                 android:layout_gravity="center"
+                android:layout_weight="1"
                 android:src="@drawable/message" />
         </LinearLayout>
 
@@ -51,6 +53,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="10">
+
                 <android.support.v4.view.ViewPager
                     android:id="@+id/indexVP"
                     android:layout_width="match_parent"
@@ -63,45 +66,73 @@
                         android:background="@color/white"
                         android:paddingVertical="7dp"
                         android:textColor="@color/colorPrimaryDark"
-                        android:textSize="18sp"/>
+                        android:textSize="18sp" />
                 </android.support.v4.view.ViewPager>
             </LinearLayout>
 
             <LinearLayout
-                android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:background="@drawable/dibu">
+                android:background="@drawable/dibu"
+                android:orientation="horizontal">
+
                 <LinearLayout
+                    android:id="@+id/indexIndex"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1">
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
                     <ImageView
-                        android:id="@+id/bottom1_zhuye"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:src="@drawable/zhuyedianjiqian" />
+
+                    <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/xuanxiangka_zhuye" />
+                        android:text="主页"
+                        android:textColor="@color/colorPrimary" />
                 </LinearLayout>
+
                 <LinearLayout
+                    android:id="@+id/indexChannel"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1">
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
                     <ImageView
-                        android:id="@+id/bottom1_pindao"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:src="@drawable/pindaodianjihou" />
+
+                    <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/xuanxiangka_pindao"/>
+                        android:text="频道" />
                 </LinearLayout>
+
                 <LinearLayout
+                    android:id="@+id/indexTrends"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1">
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
                     <ImageView
-                        android:id="@+id/bottom1_dongtai"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:src="@drawable/dongtaidianjihou" />
+
+                    <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/xuanxiangka_dongtai"/>
+                        android:text="动态" />
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>

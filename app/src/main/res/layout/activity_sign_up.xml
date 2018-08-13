@@ -1,89 +1,112 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="horizontal"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/launch_background"
     android:gravity="center_vertical"
-    android:background="@drawable/launch_background">
+    android:orientation="horizontal">
+
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:layout_weight="1"/>
+        android:layout_weight="1" />
+
     <ScrollView
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="5"
         android:scrollbars="none">
+
         <LinearLayout
-            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
             <LinearLayout
-                android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
-                android:gravity="center">
+                android:gravity="center"
+                android:orientation="vertical">
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textAlignment="center"
                     android:text="@string/signUp"
-                    android:textSize="45sp"/>
+                    android:textAlignment="center"
+                    android:textSize="45sp" />
             </LinearLayout>
+
             <LinearLayout
-                android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center">
+                android:gravity="center"
+                android:orientation="vertical">
+
                 <LinearLayout
-                    android:orientation="vertical"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
                     <EditText
                         android:id="@+id/signUpUsername"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/round_corner_gray"
                         android:hint="@string/username"
-                        android:maxLines="1"/>
+                        android:maxLines="1"
+                        android:paddingHorizontal="10dp"
+                        android:paddingVertical="5dp"
+                        android:textSize="17sp" />
+
                     <EditText
                         android:id="@+id/signUpPassword"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/round_corner_gray"
                         android:hint="@string/password"
                         android:maxLines="1"
-                        android:maxLength="16"
-                        android:inputType="textPassword"/>
+                        android:paddingHorizontal="10dp"
+                        android:paddingVertical="5dp"
+                        android:textSize="17sp" />
+
                     <EditText
                         android:id="@+id/signUpCheckPassword"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:background="@drawable/round_corner_gray"
                         android:hint="@string/checkPw"
                         android:maxLines="1"
-                        android:maxLength="16"
-                        android:inputType="textPassword"/>
+                        android:paddingHorizontal="10dp"
+                        android:paddingVertical="5dp"
+                        android:textSize="17sp" />
                 </LinearLayout>
+
                 <Button
                     android:id="@+id/signUpButton"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
+                    android:background="@color/colorPrimaryDark"
                     android:text="@string/signUp"
-                    android:textSize="18sp"
                     android:textColor="@color/gray"
-                    android:background="@color/colorPrimaryDark"/>
+                    android:textSize="18sp" />
+
                 <TextView
                     android:id="@+id/sign2log"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:paddingVertical="10dp"
                     android:text="@string/sign2log"
-                    android:textAlignment="center"/>
+                    android:textAlignment="center" />
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
+
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:layout_weight="1"/>
+        android:layout_weight="1" />
 </LinearLayout>

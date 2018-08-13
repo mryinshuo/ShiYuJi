@@ -14,13 +14,13 @@ import android.widget.TextView;
 
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private static final String TAG = "LoginActivity";
     private EditText editTextUn;
     private EditText editTextPw;
-    private Button togglePw;
+    private TextView togglePw;
     private Button loginButton;
     private TextView findPw;
     private TextView log2sign;
+    private boolean isShown = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,7 +29,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
         editTextUn = (EditText) findViewById(R.id.loginUn);
         editTextPw = (EditText) findViewById(R.id.loginPw);
-        togglePw = (Button) findViewById(R.id.togglePw);
+        togglePw = (TextView) findViewById(R.id.togglePw);
         togglePw.setOnClickListener(this);
         loginButton = (Button) findViewById(R.id.loginButton);
         loginButton.setOnClickListener(this);
@@ -43,14 +43,16 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.togglePw:
-                if (togglePw.getText().toString().equals("显示密码")) {                             // 若当前密码为隐藏状态
-                    editTextPw.setTransformationMethod(HideReturnsTransformationMethod.getInstance());  // 显示密码
-                    togglePw.setText("隐藏密码");                                                        // 改变文字
-                    editTextPw.setSelection(editTextPw.length());                                       // 将光标移至最后
-                } else if (togglePw.getText().toString().equals("隐藏密码")) {                      // 若当前密码为显示状态
-                    editTextPw.setTransformationMethod(PasswordTransformationMethod.getInstance());     // 隐藏密码
-                    togglePw.setText("显示密码");                                                        // 改变文字
-                    editTextPw.setSelection(editTextPw.length());                                       // 将光标移至最后
+                if (!isShown) {                                                                     // 若当前密码为隐藏状态
+                    editTextPw.setTransformationMethod(HideReturnsTransformationMethod.getInstance());    // 显示密码
+                    togglePw.setText("隐藏");                                                             // 改变文字
+                    editTextPw.setSelection(editTextPw.length());                                         // 将光标移至最后
+                    isShown = true;
+                } else {                                                                            // 若当前密码为显示状态
+                    editTextPw.setTransformationMethod(PasswordTransformationMethod.getInstance());       // 隐藏密码
+                    togglePw.setText("显示");                                                             // 改变文字
+                    editTextPw.setSelection(editTextPw.length());                                         // 将光标移至最后
+                    isShown = false;
                 }
                 break;
             case R.id.loginButton:      // 登录按钮

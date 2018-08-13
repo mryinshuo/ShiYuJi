@@ -3,12 +3,15 @@ package com.shiyuji;
 import android.app.Dialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
-import android.widget.ImageButton;
+import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -18,16 +21,45 @@ public class EditTopicChannel extends AppCompatActivity implements View.OnClickL
     private TextView choosePhoto;
     private TextView takePhoto;
     private Dialog dialog;
-    private ImageButton editAddImage;
+    private ImageView editAddImage;
+    private EditText topicInput;
+    private TextView topicInputNum;
     private boolean selected = false;
+    private final int TOTALNUM = 300;
+    private boolean isOutOfBound = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.channel_topic_edit);
 
-        editAddImage = (ImageButton) findViewById(R.id.editAddImage);
+        topicInput = (EditText) findViewById(R.id.topicInputET);
+        topicInputNum = (TextView) findViewById(R.id.topicInputNum);
+        editAddImage = (ImageView) findViewById(R.id.editAddImage);
         editAddImage.setOnClickListener(this);
+
+        topicInput.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                if (count <= TOTALNUM) {
+                    topicInputNum.setText(Integer.toString(count));
+                } else {
+                    isOutOfBound = true;
+                }
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                if (isOutOfBound) {
+
+                }
+            }
+        });
     }
 
     public void show() {

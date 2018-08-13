@@ -52,22 +52,63 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="10">
+                android:layout_weight="10"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#ffffff"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:paddingVertical="5dp"
+                            android:text="推荐"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:paddingVertical="5dp"
+                            android:text="直播"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:paddingVertical="5dp"
+                            android:text="附近"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/indexVPTitleCursor"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scaleType="matrix"
+                        android:src="@drawable/pagerview_title_cursor" />
+                </LinearLayout>
 
                 <android.support.v4.view.ViewPager
                     android:id="@+id/indexVP"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                    <android.support.v4.view.PagerTitleStrip
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="top"
-                        android:background="@color/white"
-                        android:paddingVertical="7dp"
-                        android:textColor="@color/colorPrimaryDark"
-                        android:textSize="18sp" />
-                </android.support.v4.view.ViewPager>
+                    android:layout_height="wrap_content"/>
             </LinearLayout>
 
             <LinearLayout

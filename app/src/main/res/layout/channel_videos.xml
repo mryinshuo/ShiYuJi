@@ -17,6 +17,7 @@
         android:layout_height="0dp"
         android:layout_weight="11"
         android:orientation="vertical">
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -159,8 +160,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:background="#cff1e5bb"
-                        android:paddingStart="8dp"
                         android:paddingEnd="68dp"
+                        android:paddingStart="8dp"
                         android:text="@string/chuanyuea17" />
 
                 </LinearLayout>
@@ -192,8 +193,8 @@
                     <Button
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:minHeight="0dp"
                         android:background="@drawable/round_corner_gray"
+                        android:minHeight="0dp"
                         android:padding="8dp"
                         android:text="成为传承人"
                         android:textColor="#E5B483"
@@ -203,9 +204,9 @@
                         android:id="@+id/ChannelVideosInheritor"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:minHeight="0dp"
                         android:layout_marginStart="20dp"
                         android:background="@drawable/round_corner_gray"
+                        android:minHeight="0dp"
                         android:padding="8dp"
                         android:text="现有传承人"
                         android:textColor="#E5B483"
@@ -220,21 +221,51 @@
                     android:textColor="#E5B483"
                     android:textSize="17sp" />
 
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#ffffff"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:paddingVertical="5dp"
+                            android:text="官方"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:paddingVertical="5dp"
+                            android:text="非官方"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/videosVPTitleCursor"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scaleType="matrix"
+                        android:src="@drawable/pagerview_title_cursor" />
+                </LinearLayout>
+
                 <android.support.v4.view.ViewPager
                     android:id="@+id/channelVideosVP"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_weight="1">
-
-                    <android.support.v4.view.PagerTitleStrip
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="top"
-                        android:background="@color/white"
-                        android:paddingVertical="7dp"
-                        android:textColor="@color/colorPrimaryDark"
-                        android:textSize="18sp" />
-                </android.support.v4.view.ViewPager>
+                    android:layout_weight="1" />
             </LinearLayout>
         </ScrollView>
     </LinearLayout>
